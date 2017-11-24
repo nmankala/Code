@@ -1,0 +1,9 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/IMD.SP.SiteColumnAndContentTypes/bin/Debug
+/IMD.SP.SiteColumnAndContentTypes/obj
+/packages
+/.vs
+/UpgradeLog.htm
