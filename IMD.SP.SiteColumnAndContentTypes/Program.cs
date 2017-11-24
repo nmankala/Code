@@ -37,7 +37,6 @@ namespace IMD.SP.SiteColumnAndContentTypes
                         CreatingSiteColumns(SiteColumns, clientContext);
                         Console.WriteLine("Creating Site Content Types........");
                         CreatingContentTypes(ContentTypes, clientContext);
-                        Console.ReadKey();
                     }
 
 
