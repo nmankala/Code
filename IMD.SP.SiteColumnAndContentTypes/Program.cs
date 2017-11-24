@@ -8,32 +8,39 @@ using System.Xml;
 namespace IMD.SP.SiteColumnAndContentTypes
 {
     class Program
-    {
-        // public static string filename = @"D:\Venkata\DMS\SiteColumnsContentTypes\SiteColumnsContentTypes\InputData\IMDData.xml";         
+    {   
         public static XmlDocument xmlDoc = new XmlDocument();
+     
+        /// First Arguement "FilePath" is path of xml file having site columns and content tzpe information
+        /// Second Arguement "SiteUrl" is url of the site where zou want to create site columns and content Tzpes
+        /// Third Arguement "ClientID"  is Client id of the app 
+        /// Fourth Argument "SecreteID" is Secrete id of the app 
         static void Main(string[] args)
         {
-            //Loading Input Data from XML File
-            Console.WriteLine("Please provide XML File Path");
-            var filePath = Console.ReadLine();
-            if (System.IO.File.Exists(filePath))
+            if (System.IO.File.Exists(args[0]))
             {
-                xmlDoc.Load(filePath);
+                xmlDoc.Load(args[0]);
                 XmlNode Connection = xmlDoc.SelectSingleNode("/Inputs/ConnectSPOnline");
                 XmlNode SiteColumns = xmlDoc.SelectSingleNode("/Inputs/SiteColumns");
                 XmlNode ContentTypes = xmlDoc.SelectSingleNode("/Inputs/ContentTypes");
-                AuthenticationManager authManager = new AuthenticationManager();
+                
                 try
                 {
-                    // Get and set the client context & Connects to SharePoint online site using inputs provided   
-                    using (var clientContext = authManager.GetSharePointOnlineAuthenticatedContextTenant(Connection.Attributes["SiteURL"].Value.ToString(), Connection.Attributes["UserName"].Value.ToString(), Connection.Attributes["Password"].Value.ToString()))
+                    Uri siteUri = new Uri(args[1]);
+                    string realm = TokenHelper.GetRealmFromTargetUrl(siteUri);    
+                    string accessToken = TokenHelper.GetAppOnlyAccessToken1(TokenHelper.SharePointPrincipal,
+                                                                          siteUri.Authority, realm, args[2], args[3]).AccessToken;
+                    using (var clientContext = TokenHelper.GetClientContextWithAccessToken(siteUri.ToString(), accessToken))
                     {
+                        Console.WriteLine("oAuth Authentication is added");
                         Console.WriteLine("Creating Site Columns.........");
                         CreatingSiteColumns(SiteColumns, clientContext);
                         Console.WriteLine("Creating Site Content Types........");
                         CreatingContentTypes(ContentTypes, clientContext);
                         Console.ReadKey();
-                    }
+                    } 
+
+ 
                 }
                 catch (Exception ex)
                 {
@@ -60,12 +67,10 @@ namespace IMD.SP.SiteColumnAndContentTypes
                 }
                 else
                 {
-                    //Creating Managed Meta Data Site Columns
                     if (node.Attributes["MMD"].Value != "0")
                     {
-                        CreateManagedMetaDataSiteColumns(clientcontext, node.Attributes["DisplayName"].Value, node.Attributes["InternalName"].Value, node.Attributes["GroupName"].Value, node.Attributes["MMDValue"].Value);
+                        CreateManagedMetaDataSiteColumns(clientcontext, node.Attributes["DisplayName"].Value, node.Attributes["InternalName"].Value, node.Attributes["GroupName"].Value, node.Attributes["MMDValue"].Value);                       
                     }
-                    //Creating Normal Site Columns
                     else
                     {
                         CreateNormalSiteColumns(clientcontext, node.Attributes["DisplayName"].Value, node.Attributes["InternalName"].Value, node.Attributes["GroupName"].Value, node.Attributes["Type"].Value);
@@ -81,6 +86,7 @@ namespace IMD.SP.SiteColumnAndContentTypes
             var contentTypes = clientcontext.Web.ContentTypes;
             foreach (XmlNode node in contenttypes.ChildNodes)
             {
+                //if (!clientcontext.Web.ContentTypeExistsByName(node.Attributes["Name"].Value)=
                 if (!CheckContentType(clientcontext, node.Attributes["Name"].Value))
                 {
                     ContentTypeCreationInformation CT = new ContentTypeCreationInformation()
@@ -91,13 +97,15 @@ namespace IMD.SP.SiteColumnAndContentTypes
                     var contentType = contentTypes.Add(CT);
                     clientcontext.Load(contentType);
                     clientcontext.ExecuteQuery();
-                    Console.WriteLine("New Content Type" + node.Attributes["Name"].Value + " has been created");
-                    Console.WriteLine("Adding Site Columns to " + node.Attributes["Name"].Value + "Content Type");
+                    Console.WriteLine("New Content Type " + node.Attributes["Name"].Value + " has been created");
+                    Console.WriteLine("Now Adding Site Columns to " + node.Attributes["Name"].Value + " Content Type");
                     foreach (XmlNode childnode in node.ChildNodes)
                     {
-
-                        AddSiteColumnsToContentType(clientcontext, childnode.Attributes["Name"].Value, node.Attributes["Name"].Value);
-                        Console.WriteLine(childnode.Attributes["Name"].Value + " is added to " + node.Attributes["Name"].Value + " Content Type");
+                        if (!clientcontext.Web.FieldExistsByName(childnode.Attributes["InternalName"].Value))
+                        {
+                            CreateNormalSiteColumns(clientcontext, childnode.Attributes["DisplayName"].Value, childnode.Attributes["InternalName"].Value, childnode.Attributes["GroupName"].Value, childnode.Attributes["Type"].Value);
+                        }
+                        AddSiteColumnsToContentType(clientcontext, childnode.Attributes["InternalName"].Value, node.Attributes["Name"].Value);                  
                     }
                 }
                 else
@@ -105,11 +113,12 @@ namespace IMD.SP.SiteColumnAndContentTypes
                     Console.WriteLine("Content Type " + node.Attributes["Name"].Value + " is already exists now we are site columns......");
                     foreach (XmlNode childnode in node.ChildNodes)
                     {
-
-                        AddSiteColumnsToContentType(clientcontext, childnode.Attributes["Name"].Value, node.Attributes["Name"].Value);
-                        Console.WriteLine(childnode.Attributes["Name"].Value + " is added to " + node.Attributes["Name"].Value + " Content Type");
+                        if(!clientcontext.Web.FieldExistsByName(childnode.Attributes["InternalName"].Value))
+                        {
+                            CreateNormalSiteColumns(clientcontext, childnode.Attributes["DisplayName"].Value, childnode.Attributes["InternalName"].Value, childnode.Attributes["GroupName"].Value, childnode.Attributes["Type"].Value);
+                        }                  
+                        AddSiteColumnsToContentType(clientcontext, childnode.Attributes["InternalName"].Value, node.Attributes["Name"].Value);                    
                     }
-
                 }
             }
         }
@@ -125,7 +134,6 @@ namespace IMD.SP.SiteColumnAndContentTypes
             if (type == "Note") { fieldType = FieldType.Note; }
             if (type == "Boolean") { fieldType = FieldType.Boolean; }
             if (type == "Currency") { fieldType = FieldType.Currency; }
-
             // Field Creation Parameters  
             OfficeDevPnP.Core.Entities.FieldCreationInformation newFieldInfo = new OfficeDevPnP.Core.Entities.FieldCreationInformation(fieldType)
             {
@@ -156,29 +164,26 @@ namespace IMD.SP.SiteColumnAndContentTypes
             taxonomyField.Update();
             cContext.ExecuteQuery();
             Console.WriteLine("New " + displayname + " Column is created");
-
         }
 
         static void AddSiteColumnsToContentType(ClientContext clientContext, string fieldname, string contenttypename)
         {
-            Web rootWeb = clientContext.Site.RootWeb;
-            if (rootWeb.FieldExistsByName(fieldname))
+            if (!clientContext.Site.RootWeb.FieldExistsByNameInContentType(contenttypename, fieldname))
             {
-                Field sitecolumn = rootWeb.Fields.GetByInternalNameOrTitle(fieldname);
-                //ContentType sessionContentType = rootWeb.ContentTypes.GetById("0x0100BDD5E43587AF469CA722FD068065DF5D");
-                ContentType siteContentType = rootWeb.GetContentTypeByName(contenttypename);
+                Field sitecolumn = clientContext.Site.RootWeb.Fields.GetByInternalNameOrTitle(fieldname);
+                ContentType siteContentType = clientContext.Site.RootWeb.GetContentTypeByName(contenttypename);
                 siteContentType.FieldLinks.Add(new FieldLinkCreationInformation
                 {
                     Field = sitecolumn
                 });
                 siteContentType.Update(true);
                 clientContext.ExecuteQuery();
+                Console.WriteLine(fieldname + " is added to " + contenttypename + " Content Type");
             }
             else
             {
-                Console.WriteLine("Site Column " + fieldname + " doesn't exist");
-            }
-
+                Console.WriteLine(fieldname + " is already added to the Content Type");
+            }          
         }
         static void GetTaxonomyFieldInfo(ClientContext clientContext, string TermsetName, out Guid termStoreId, out Guid termSetId)
         {
