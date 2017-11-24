@@ -8,9 +8,9 @@ using System.Xml;
 namespace IMD.SP.SiteColumnAndContentTypes
 {
     class Program
-    {   
+    {
         public static XmlDocument xmlDoc = new XmlDocument();
-     
+
         /// First Arguement "FilePath" is path of xml file having site columns and content tzpe information
         /// Second Arguement "SiteUrl" is url of the site where zou want to create site columns and content Tzpes
         /// Third Arguement "ClientID"  is Client id of the app 
@@ -23,11 +23,11 @@ namespace IMD.SP.SiteColumnAndContentTypes
                 XmlNode Connection = xmlDoc.SelectSingleNode("/Inputs/ConnectSPOnline");
                 XmlNode SiteColumns = xmlDoc.SelectSingleNode("/Inputs/SiteColumns");
                 XmlNode ContentTypes = xmlDoc.SelectSingleNode("/Inputs/ContentTypes");
-                
+
                 try
                 {
                     Uri siteUri = new Uri(args[1]);
-                    string realm = TokenHelper.GetRealmFromTargetUrl(siteUri);    
+                    string realm = TokenHelper.GetRealmFromTargetUrl(siteUri);
                     string accessToken = TokenHelper.GetAppOnlyAccessToken1(TokenHelper.SharePointPrincipal,
                                                                           siteUri.Authority, realm, args[2], args[3]).AccessToken;
                     using (var clientContext = TokenHelper.GetClientContextWithAccessToken(siteUri.ToString(), accessToken))
@@ -38,9 +38,9 @@ namespace IMD.SP.SiteColumnAndContentTypes
                         Console.WriteLine("Creating Site Content Types........");
                         CreatingContentTypes(ContentTypes, clientContext);
                         Console.ReadKey();
-                    } 
+                    }
 
- 
+
                 }
                 catch (Exception ex)
                 {
@@ -69,7 +69,7 @@ namespace IMD.SP.SiteColumnAndContentTypes
                 {
                     if (node.Attributes["MMD"].Value != "0")
                     {
-                        CreateManagedMetaDataSiteColumns(clientcontext, node.Attributes["DisplayName"].Value, node.Attributes["InternalName"].Value, node.Attributes["GroupName"].Value, node.Attributes["MMDValue"].Value);                       
+                        CreateManagedMetaDataSiteColumns(clientcontext, node.Attributes["DisplayName"].Value, node.Attributes["InternalName"].Value, node.Attributes["GroupName"].Value, node.Attributes["MMDValue"].Value);
                     }
                     else
                     {
@@ -105,7 +105,7 @@ namespace IMD.SP.SiteColumnAndContentTypes
                         {
                             CreateNormalSiteColumns(clientcontext, childnode.Attributes["DisplayName"].Value, childnode.Attributes["InternalName"].Value, childnode.Attributes["GroupName"].Value, childnode.Attributes["Type"].Value);
                         }
-                        AddSiteColumnsToContentType(clientcontext, childnode.Attributes["InternalName"].Value, node.Attributes["Name"].Value);                  
+                        AddSiteColumnsToContentType(clientcontext, childnode.Attributes["InternalName"].Value, node.Attributes["Name"].Value);
                     }
                 }
                 else
@@ -113,11 +113,11 @@ namespace IMD.SP.SiteColumnAndContentTypes
                     Console.WriteLine("Content Type " + node.Attributes["Name"].Value + " is already exists now we are site columns......");
                     foreach (XmlNode childnode in node.ChildNodes)
                     {
-                        if(!clientcontext.Web.FieldExistsByName(childnode.Attributes["InternalName"].Value))
+                        if (!clientcontext.Web.FieldExistsByName(childnode.Attributes["InternalName"].Value))
                         {
                             CreateNormalSiteColumns(clientcontext, childnode.Attributes["DisplayName"].Value, childnode.Attributes["InternalName"].Value, childnode.Attributes["GroupName"].Value, childnode.Attributes["Type"].Value);
-                        }                  
-                        AddSiteColumnsToContentType(clientcontext, childnode.Attributes["InternalName"].Value, node.Attributes["Name"].Value);                    
+                        }
+                        AddSiteColumnsToContentType(clientcontext, childnode.Attributes["InternalName"].Value, node.Attributes["Name"].Value);
                     }
                 }
             }
@@ -183,7 +183,7 @@ namespace IMD.SP.SiteColumnAndContentTypes
             else
             {
                 Console.WriteLine(fieldname + " is already added to the Content Type");
-            }          
+            }
         }
         static void GetTaxonomyFieldInfo(ClientContext clientContext, string TermsetName, out Guid termStoreId, out Guid termSetId)
         {
