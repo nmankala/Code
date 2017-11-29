@@ -1,0 +1,13 @@
+﻿<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>IMD.SP.SiteColumnAndContentTypes</id>
+    <title>IMD.SP.SiteColumnAndContentTypes</title>
+    <version>1.0.0</version>
+    <authors>Nischal Mankala</authors>
+    <owners>Capgemini</owners>
+    <projectUrl>http://dmsdev.imd.org</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>This NuGet package is used by Octopus Deploy.</description>
+  </metadata>
+</package>
