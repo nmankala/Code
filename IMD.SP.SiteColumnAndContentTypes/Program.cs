@@ -1,9 +1,8 @@
-﻿using Microsoft.SharePoint.Client;
-using Microsoft.SharePoint.Client.Taxonomy;
-using OfficeDevPnP.Core;
-using System;
+﻿using System;
 using System.Linq;
 using System.Xml;
+using Microsoft.SharePoint.Client;
+using Microsoft.SharePoint.Client.Taxonomy;
 
 namespace IMD.SP.SiteColumnAndContentTypes
 {
