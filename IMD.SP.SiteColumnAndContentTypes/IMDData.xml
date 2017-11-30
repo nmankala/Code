@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>  
+<Inputs>  
+<ConnectSPOnline SiteURL="https://imdtst.sharepoint.com/sites/DevOps" UserName="venkata.Guttula@IMDTST.onmicrosoft.com" Password="sriram@12"></ConnectSPOnline>   
+<SiteColumns>
+	<SiteColumn InternalName="IMDTitle" DisplayName="IMD Product Title" Type="Text" GroupName="IMD Site Columns" MMD="0"/> 
+	<SiteColumn InternalName="IMDDescription" DisplayName="IMD Product Description" Type="Note" GroupName="IMD Site Columns" MMD="0"/> 
+	<SiteColumn InternalName="IMDChoiceSiteColumn" DisplayName="IMD Choice Site Column" Type="Choice" GroupName="IMD Site Columns" Values="red,green,yellow" MMD="0"/> 
+	<SiteColumn InternalName="IMDBooleanSiteColumn" DisplayName="IMD Bolean Site Column" Type="Boolean" GroupName="IMD Site Columns" MMD="0"/> 
+	<SiteColumn InternalName="IMDIntegerSiteColumn" DisplayName="IMD Integer Site Column" Type="Integer" GroupName="IMD Site Columns" MMD="0"/>
+	<SiteColumn InternalName="IMDDateTimeSiteColumn" DisplayName="IMD DateTime SiteColumn" Type="DateTime" GroupName="IMD Site Columns" MMD="0"/> 
+	<SiteColumn InternalName="IMDNumberSiteColumn" DisplayName="IMD Number Site Column" Type="Number" GroupName="IMD Site Columns" MMD="0"/>
+	<SiteColumn InternalName="IMDMMDSiteColumn" DisplayName="IMD MMD Site Column" Type="MMD" GroupName="IMD Site Columns" MMD="1" MMDValue="Department"/>
+</SiteColumns>
+<ContentTypes>
+	<ContentType Name="IMD ContentType 1" Group="IMD ContentTypes">
+		<Column Name="IMDDescription"></Column>
+		<Column Name="IMDBooleanSiteColumn"></Column> 
+		<Column Name="IMDChoiceSiteColumn"></Column>
+	</ContentType> 
+	<ContentType Name="IMD ContentType 2" Group="IMD ContentTypes">
+		<Column Name="IMDTitle"></Column>
+		<Column Name="IMDMMDSiteColumn"></Column>
+		<Column Name="IMDIntegerSiteColumn"></Column>
+	</ContentType> 
+</ContentTypes> 
+</Inputs> 
