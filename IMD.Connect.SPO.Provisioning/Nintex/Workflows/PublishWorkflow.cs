@@ -25,7 +25,7 @@ namespace IMD.Connect.SPO.Provisioning
 
         // The workflow to be published.
         // TODO: Replace with your workflow identifier.
-        static private string workflowId = "cff451cd-ea74-4255-bf70-ddcab358b780";
+        static private string workflowId = "722cf328-7116-471c-824b-beca17f09fe0";
         static private string destinationListTitle = "CreateCustomLibray";
         /// <summary>
         /// The main entry point for the application.
@@ -105,7 +105,8 @@ namespace IMD.Connect.SPO.Provisioning
             // Note that we're making this call synchronously - you can call the REST API
             // asynchronously, as needed.
             //  var publishWorkflowUri = String.Format("{0}/api/v1/workflows/{1}/published",
-            var publishWorkflowUri = String.Format("https://imdtst.nintexo365.com/api/v1/workflows/cff451cd-ea74-4255-bf70-ddcab358b780/published",
+            var publishWorkflowUri = String.Format("https://imdtst.nintexo365.com/api/v1/workflows/722cf328-7116-471c-824b-beca17f09fe0/published",
+            //var publishWorkflowUri = String.Format("https://imdtst.nintexo365.com/api/v1/workflows/"+workflowId+"/published",
                 apiRootUrl.TrimEnd('/'),
                 Uri.EscapeUriString(destinationListTitle));
 

@@ -72,6 +72,7 @@ namespace IMD.Connect.SPO.Provisioning
                     Console.WriteLine("Exporting Nintex Workflows");
                     ExportWorkflow.ExportWorkflowToFile();          
                     ExportWorkflow.UplodeWorkflow();
+                    Console.WriteLine("Export Workflow is completed");
                     Console.ReadLine();
 
                     //Console.WriteLine("Please provide Nintex API Key for Export");
@@ -88,6 +89,7 @@ namespace IMD.Connect.SPO.Provisioning
                 case "4":
                     Console.WriteLine("Importing Nintex Workflow");
                     ImportWorkflow.CopyWorkflowToList();
+                    Console.WriteLine("Import Workflow is completed");
                     Console.ReadKey();
                     break;
                 case "5":

@@ -136,10 +136,8 @@ namespace IMD.Connect.SPO.Provisioning
 
         static public void UplodeWorkflow()
         {
-
             try
             {
-
                 ClientContext contextSource = new ClientContext(spSiteUrl);
                 var fileName = filepath;
                 var passWord = new SecureString();
