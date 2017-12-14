@@ -4,19 +4,22 @@ using System.Xml;
 using Microsoft.SharePoint.Client;
 using Microsoft.SharePoint.Client.Taxonomy;
 using System.Linq;
-
 namespace IMD.Connect.SPO.Provisioning
 {
     class CreatingSiteColumns
     {
-        public static void SiteCoumnsCreation(string filePath)
+        public static void SiteCoumnsCreation()
         {
             XmlDocument xmlDoc = new XmlDocument();
-            if (System.IO.File.Exists(filePath))
+            string FilePath = "";
+            Console.WriteLine("Please provide provisioning XML File");
+            FilePath = Console.ReadLine();
+            Console.WriteLine("Creating Site Columns...........");
+            if (System.IO.File.Exists(FilePath))
             {
                 try
                 {
-                    xmlDoc.Load(filePath);
+                    xmlDoc.Load(FilePath);
                     XmlNode SiteColumns = xmlDoc.SelectSingleNode("/ProvisioningTemplate/SiteFields");             
                     using (var ctx = CommonConnection.CreateClientContext1())
                     {
@@ -27,13 +30,19 @@ namespace IMD.Connect.SPO.Provisioning
                                 if (!ctx.Web.FieldExistsByName(node.Attributes["Name"].Value))
                                 {
                                     if (node.Attributes["Type"].Value == "MMD")
+                                    {
                                         CreateManagedMetaDataSiteColumns(ctx, node.Attributes["DisplayName"].Value, node.Attributes["Name"].Value, node.Attributes["Group"].Value, node.Attributes["MMDValue"].Value);
+                                    }
+                                        
                                     else
+                                    {
                                         scope.ExecuteCommand("Add-PnPFieldFromXml", new CommandParameter("FieldXml", node.OuterXml));
+                                        Console.WriteLine("The New Site Column " + node.Attributes["DisplayName"].Value + " has been created");
+                                    }                                    
                                 }
                                 else
                                 {
-                                    Console.WriteLine(node.Attributes["Name"].Value + " exists in the site");
+                                    Console.WriteLine("The SiteColumns " +node.Attributes["Name"].Value + "  is already exists in the Site");
                                 }
                             }
                         }
@@ -62,7 +71,7 @@ namespace IMD.Connect.SPO.Provisioning
             taxonomyField.AnchorId = Guid.Empty;
             taxonomyField.Update();
             cContext.ExecuteQuery();
-            Console.WriteLine("New " + displayname + " Column is created");
+            Console.WriteLine("The New Site Column " + displayname + " has been created");
         }
         static void GetTaxonomyFieldInfo(ClientContext clientContext, string TermsetName, out Guid termStoreId, out Guid termSetId)
         {

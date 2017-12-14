@@ -2,20 +2,24 @@
 using System.Xml;
 using System.Management.Automation.Runspaces;
 using Microsoft.SharePoint.Client;
-using System.Linq;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace IMD.Connect.SPO.Provisioning
 {
     class CreatingContentTypes
     {
-        public static void ContentTypeCreation(string filePath)
+        public static void ContentTypeCreation()
         {
+            string FilePath = null;
             XmlDocument xmlDoc = new XmlDocument();
-            if (System.IO.File.Exists(filePath))
+            Console.WriteLine("Please provide provisioning XML File");
+            FilePath = Console.ReadLine();
+            Console.WriteLine("Creating Content Types and Adding Site Columns...");
+            if (System.IO.File.Exists(FilePath))
             {
                 try
                 {
-                    xmlDoc.Load(filePath);
+                    xmlDoc.Load(FilePath);
                     XmlNode ContentTypes = xmlDoc.SelectSingleNode("/ProvisioningTemplate/ContentTypes");
                     using (var ctx = CommonConnection.CreateClientContext1())
                     {
@@ -23,41 +27,50 @@ namespace IMD.Connect.SPO.Provisioning
                         {
                             foreach (XmlNode node in ContentTypes.ChildNodes)
                             {
-                                if(!ctx.Web.ContentTypeExistsByName(node.Attributes["Name"].Value))
+                                var succeeded = false;
+                                if (!ctx.Web.ContentTypeExistsByName(node.Attributes["Name"].Value))
                                 {
                                     scope.ExecuteCommand("Add-PnPContentType",
                                                             new CommandParameter("Name", node.Attributes["Name"].Value),
                                                             new CommandParameter("Group", node.Attributes["Group"].Value));
-                                    Console.WriteLine("Content Type is created, now adding site columns");
+                                    succeeded = true;
+                                    Console.WriteLine("The New Content Type " + node.Attributes["Name"].Value + " has been created");
+                                    Console.WriteLine("Adding Site Columns to " + node.Attributes["Name"].Value + " Content Type......");
+                                }
+                                else
+                                {
+                                    Console.WriteLine("The Content Type " + node.Attributes["Name"].Value + " is already exists in the site");
+                                    succeeded = true;
+                                    Console.WriteLine("Adding the Site Columns to " + node.Attributes["Name"].Value + " Content Type......");
+                                }
+
+                                if (succeeded)
+                                {
                                     foreach (XmlNode childnode in node.ChildNodes)
                                     {
-                                        foreach( XmlNode schildnode in childnode.ChildNodes)
+                                        foreach (XmlNode schildnode in childnode.ChildNodes)
                                         {
                                             Guid fieldId = new Guid(schildnode.Attributes["ID"].Value);
                                             Field fld = ctx.Site.RootWeb.GetFieldById(fieldId);
-                                            if(!ctx.Site.RootWeb.FieldExistsByNameInContentType(node.Attributes["Name"].Value, fld.Title))
+                                            if (!ctx.Site.RootWeb.FieldExistsByNameInContentType(node.Attributes["Name"].Value, fld.InternalName))
                                             {
                                                 scope.ExecuteCommand("Add-PnPFieldToContentType",
                                                        new CommandParameter("ContentType", node.Attributes["Name"].Value),
-                                                       new CommandParameter("Field", fld.Title));
+                                                       new CommandParameter("Field", fld.InternalName));
+                                                Console.WriteLine("The Site Columns "+ fld.Title+ " is added to " + node.Attributes["Name"].Value+ " Content type");
                                             }
                                             else
                                             {
-                                                Console.WriteLine("Site Column is already available in Content Type");
+                                                Console.WriteLine("Site Column is already there in  Content Type");
                                             }
-                                           
                                         }
-                                    }                                   
-                                }                                  
-                                else
-                                {
-                                    Console.WriteLine(node.Attributes["Name"].Value + " exists in the site");
-                                }
-                                                                   
+                                    }
+                                }                                                     
+                                }                                                                                                                             
                             }
                         }
                     }
-                }
+                
                 catch (Exception ex)
                 {
                     Console.WriteLine(ex.Message.ToString());
