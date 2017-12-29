@@ -186,13 +186,18 @@
     <Compile Include="Nintex\Workflows\PublishWorkflow.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Provisioning\ContentTypes\ContentTypes.cs" />
     <Compile Include="Provisioning\ContentTypes\CreatingContentTypes.cs" />
+    <Compile Include="Provisioning\Lists\Lists.cs" />
+    <Compile Include="Provisioning\Lists\MasterLists.cs" />
     <Compile Include="Provisioning\SiteColumns\CreatingSiteColumns.cs" />
+    <Compile Include="Provisioning\SiteColumns\SiteColumns.cs" />
     <Compile Include="Resources\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Taxonomy\Taxonomy.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

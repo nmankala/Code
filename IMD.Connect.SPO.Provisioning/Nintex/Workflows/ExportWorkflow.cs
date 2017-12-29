@@ -9,7 +9,7 @@ namespace IMD.Connect.SPO.Provisioning
 {
     class ExportWorkflow
     {
-        private static string apiKey=null;
+        private static string apiKey = null;
         private static string apiRootUrl = null;
         private static string spSiteUrl = null;
         private static string workflowId = null;
@@ -45,6 +45,8 @@ namespace IMD.Connect.SPO.Provisioning
                 // Instantiate a new SharePointOnlineCredentials object, using the 
                 // specified username and password.
                 var spoCredential = new SharePointOnlineCredentials(spUsername, securePassword);
+                
+
                 // If successful, try to authenticate the credentials for the
                 // specified site.
                 if (spoCredential == null)
@@ -55,7 +57,7 @@ namespace IMD.Connect.SPO.Provisioning
                 else
                 {
                     // Credentials exist, so attempt to get the authentication cookie
-                    // from the specified site.
+                    // from the specified site.                   
                     result = spoCredential.GetAuthenticationCookie(new Uri(spSiteUrl));
                 }
             }
@@ -75,21 +77,22 @@ namespace IMD.Connect.SPO.Provisioning
         {
             try
             {
-                Console.WriteLine("Please Enter the API key");
-                // apiKey = Console.ReadLine();
-                apiKey = "5237477280d042db9122296c697bdb2c";
-                Console.WriteLine("Please Enter the API Root Url");
-                // apiRootUrl = Console.ReadLine();
+                //spSiteUrl = "https://imdtst.sharepoint.com/crk";
+                //workflowId = "ecc6bade-96b9-416a-8ae7-6f911b25e79e";             
+                //apiKey = "5237477280d042db9122296c697bdb2c";
+
                 apiRootUrl = "https://imdtst.nintexo365.com";
                 Console.WriteLine("Please Enter the Site Url");
-                //spSiteUrl = Console.ReadLine();
-                spSiteUrl = "https://imdtst.sharepoint.com/crk";
+                spSiteUrl = Console.ReadLine();
+                Console.WriteLine("Please Enter the API key");
+                apiKey = Console.ReadLine();
                 Console.WriteLine("Please Enter Workflow ID");
-                //workflowId = Console.ReadLine();
-                workflowId = "ecc6bade-96b9-416a-8ae7-6f911b25e79e";
-                Console.WriteLine("Please Enter Workflow Name");
+                workflowId = Console.ReadLine();
+                //Console.WriteLine("Please Enter Workflow Name");
                 //Filefullname = Console.ReadLine();
                 Filefullname = "createdocLibrarychk.nwp";
+
+                Console.WriteLine("Exporting Nintex Workflows.....");
 
                 // Create a new HTTP client and configure its base address.
                 HttpClient client = new HttpClient();
@@ -148,9 +151,8 @@ namespace IMD.Connect.SPO.Provisioning
                     byte[] exportFileContent = await response.Content.ReadAsByteArrayAsync();
                     System.IO.File.WriteAllBytes(exportFilePath, exportFileContent);
 
-
                     Console.WriteLine("Successfully Exported Workflow.Pls find it in D:/");
-                    Console.WriteLine(response.ReasonPhrase, response.StatusCode);
+                    //Console.WriteLine(response.ReasonPhrase, response.StatusCode);
                     Console.ReadLine();
                     // exportPath;
                 }
@@ -201,7 +203,7 @@ namespace IMD.Connect.SPO.Provisioning
 
                 contextSource.Load(files, fe => fe.Exists);
                 contextSource.ExecuteQuery();
-                Console.WriteLine(files);
+                //Console.WriteLine(files);
                 if (!files.Exists)
                 {
                     var newFile = new FileCreationInformation
@@ -215,7 +217,7 @@ namespace IMD.Connect.SPO.Provisioning
                 }
                 else
                 {
-                   // Console.WriteLine("File Already exist,will replace");
+                    // Console.WriteLine("File Already exist,will replace");
                     files.DeleteObject();
                     contextSource.ExecuteQuery();
                     var newFile = new FileCreationInformation
