@@ -1,0 +1,1076 @@
+<?xml version="1.0" encoding="utf-8"?>
+<pnp:Provisioning xmlns:pnp="http://schemas.dev.office.com/PnP/2015/12/ProvisioningSchema">
+  <pnp:Preferences Generator="OfficeDevPnP.Core, Version=2.0.1601.0, Culture=neutral, PublicKeyToken=null" />
+  <pnp:Templates ID="CONTAINER-SharePointPalsDemo">
+    <pnp:ProvisioningTemplate ID="KMSProvisioningTemplate" Version="1" xmlns:pnp="http://schemas.dev.office.com/PnP/2015/12/ProvisioningSchema">
+      <pnp:SiteFields>
+        <Field ID="{79FF778C-4F93-479F-9FA7-CCAE3D7DD070}"
+               Name="IMDLanguageTaxHidden001"
+               Type="Note"
+               DisplayName="IMDLanguage_001"
+               ShowInViewForms="FALSE"
+               Required="FALSE"
+               Hidden="TRUE"
+               CanToggleHidden="TRUE" />
+        <Field ID="{0D38493A-7DA2-4AFA-9D4C-353D0392A55E}"
+               Name="IMDLanguage"
+               StaticName="IMDLanguage"
+               DisplayName="IMDLanguage"
+               Hidden="FALSE"
+               Required="TRUE"
+               Group="KMS Site Columns"
+               Type="TaxonomyFieldType"
+               ShowField="Term1033" >
+          <Customization>
+            <ArrayOfProperty>
+              <Property>
+                <Name>SspId</Name>
+
+                <Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p4:type="q1:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">e3b6382683404cce8013adc97b7aa1ba</Value>
+              </Property>
+              <Property>
+                <Name>TermSetId</Name>
+
+                <Value xmlns:q2="http://www.w3.org/2001/XMLSchema" p4:type="q2:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">10ac2721-fd3e-44a7-bec0-8c23b352d016</Value>
+              </Property>
+              <Property>
+                <Name>TextField</Name>
+
+                <Value xmlns:q6="http://www.w3.org/2001/XMLSchema" p4:type="q6:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">{79FF778C-4F93-479F-9FA7-CCAE3D7DD070}</Value>
+              </Property>
+              <Property>
+                <Name>IsPathRendered</Name>
+                <Value xmlns:q7="http://www.w3.org/2001/XMLSchema" p4:type="q7:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">true</Value>
+              </Property>
+            </ArrayOfProperty>
+          </Customization>
+        </Field>
+        <Field ID="{61EEBF8F-3185-49FB-8EDD-8A0ACB058336}"
+           Name="IMDSubjectTopicsTaxHidden0"
+           Type="Note"
+           DisplayName="IMDSubjectTopics_0"
+           ShowInViewForms="FALSE"
+           Required="FALSE"
+           Hidden="TRUE"
+           CanToggleHidden="TRUE" />
+        <Field ID="{889C7AAD-F3D2-499B-AD3E-BBE212EE499A}"
+                Name="IMDSubjectTopics"
+                StaticName="IMDSubjectTopics"
+                DisplayName="IMDSubjectTopics"
+                Hidden="FALSE"
+                Required="TRUE"
+                Group="KMS Site Columns"
+                Type="TaxonomyFieldType"
+                ShowField="Term1033" >
+          <Customization>
+            <ArrayOfProperty>
+              <Property>
+                <Name>SspId</Name>
+
+                <Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p4:type="q1:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">e3b6382683404cce8013adc97b7aa1ba</Value>
+              </Property>
+              <Property>
+                <Name>TermSetId</Name>
+
+                <Value xmlns:q2="http://www.w3.org/2001/XMLSchema" p4:type="q2:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">9f111203-2b1f-442d-ab4f-fe877fa52cbd</Value>
+              </Property>
+              <Property>
+                <Name>TextField</Name>
+
+                <Value xmlns:q6="http://www.w3.org/2001/XMLSchema" p4:type="q6:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">{61EEBF8F-3185-49FB-8EDD-8A0ACB058336}</Value>
+              </Property>
+              <Property>
+                <Name>IsPathRendered</Name>
+                <Value xmlns:q7="http://www.w3.org/2001/XMLSchema" p4:type="q7:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">true</Value>
+              </Property>
+            </ArrayOfProperty>
+          </Customization>
+        </Field>
+        <Field ID="{083997FF-C098-49BB-A2CE-0A6F526780EA}"
+              Name="IMDAuthorsTaxHidden0"
+              Type="Note"
+              DisplayName="IMDAuthors_0"
+              ShowInViewForms="FALSE"
+              Required="FALSE"
+              Hidden="TRUE"
+              CanToggleHidden="TRUE" />
+        <Field ID="{4620148A-4EF8-439C-BF6A-325C237C9B0A}"
+                Name="IMDAuthors"
+                StaticName="IMDAuthors"
+                DisplayName="IMDAuthors"
+                Hidden="FALSE"
+                Required="TRUE"
+                Group="KMS Site Columns"
+                Type="TaxonomyFieldType"
+                ShowField="Term1033" >
+          <Customization>
+            <ArrayOfProperty>
+              <Property>
+                <Name>SspId</Name>
+
+                <Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p4:type="q1:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">e3b6382683404cce8013adc97b7aa1ba</Value>
+              </Property>
+              <Property>
+                <Name>TermSetId</Name>
+
+                <Value xmlns:q2="http://www.w3.org/2001/XMLSchema" p4:type="q2:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">9428919c-9de7-4a9e-9cf7-9c7b3ead523d</Value>
+              </Property>
+              <Property>
+                <Name>TextField</Name>
+
+                <Value xmlns:q6="http://www.w3.org/2001/XMLSchema" p4:type="q6:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">{083997FF-C098-49BB-A2CE-0A6F526780EA}</Value>
+              </Property>
+              <Property>
+                <Name>IsPathRendered</Name>
+                <Value xmlns:q7="http://www.w3.org/2001/XMLSchema" p4:type="q7:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">true</Value>
+              </Property>
+            </ArrayOfProperty>
+          </Customization>
+        </Field>
+        <Field ID="{6A2A3DC1-E71F-481C-B03F-17E38F19FC00}"
+              Name="IMDFacultyAuthorsTaxHidden0"
+              Type="Note"
+              DisplayName="IMDFacultyAuthors_0"
+              ShowInViewForms="FALSE"
+              Required="FALSE"
+              Hidden="TRUE"
+              CanToggleHidden="TRUE" />
+        <Field ID="{B724917C-E1F5-4D88-AAC6-48882AFB27F0}"
+                Name="IMDFacultyAuthors"
+                StaticName="IMDFacultyAuthors"
+                DisplayName="IMDFacultyAuthors"
+                Hidden="FALSE"
+                Required="TRUE"
+                Group="KMS Site Columns"
+                Type="TaxonomyFieldType"
+                ShowField="Term1033" >
+          <Customization>
+            <ArrayOfProperty>
+              <Property>
+                <Name>SspId</Name>
+
+                <Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p4:type="q1:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">e3b6382683404cce8013adc97b7aa1ba</Value>
+              </Property>
+              <Property>
+                <Name>TermSetId</Name>
+
+                <Value xmlns:q2="http://www.w3.org/2001/XMLSchema" p4:type="q2:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">9428919c-9de7-4a9e-9cf7-9c7b3ead523d</Value>
+              </Property>
+              <Property>
+                <Name>TextField</Name>
+
+                <Value xmlns:q6="http://www.w3.org/2001/XMLSchema" p4:type="q6:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">{6A2A3DC1-E71F-481C-B03F-17E38F19FC00}</Value>
+              </Property>
+              <Property>
+                <Name>IsPathRendered</Name>
+                <Value xmlns:q7="http://www.w3.org/2001/XMLSchema" p4:type="q7:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">true</Value>
+              </Property>
+            </ArrayOfProperty>
+          </Customization>
+        </Field>
+        <Field ID="{90D88526-8888-46AB-AA50-3824897CBA2D}"
+                      Name="RnDAuthorsTaxHidden0"
+                      Type="Note"
+                      DisplayName="RnDAuthors_0"
+                      ShowInViewForms="FALSE"
+                      Required="FALSE"
+                      Hidden="TRUE"
+                      CanToggleHidden="TRUE" />
+        <Field ID="{83639B2C-69A1-4C61-A096-56DAFA725E80}"
+                Name="RnDAuthors"
+                StaticName="RnDAuthors"
+                DisplayName="RnDAuthors"
+                Hidden="FALSE"
+                Required="TRUE"
+                Group="KMS Site Columns"
+                Type="TaxonomyFieldType"
+                ShowField="Term1033" >
+          <Customization>
+            <ArrayOfProperty>
+              <Property>
+                <Name>SspId</Name>
+
+                <Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p4:type="q1:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">e3b6382683404cce8013adc97b7aa1ba</Value>
+              </Property>
+              <Property>
+                <Name>TermSetId</Name>
+
+                <Value xmlns:q2="http://www.w3.org/2001/XMLSchema" p4:type="q2:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">9428919c-9de7-4a9e-9cf7-9c7b3ead523d</Value>
+              </Property>
+              <Property>
+                <Name>TextField</Name>
+
+                <Value xmlns:q6="http://www.w3.org/2001/XMLSchema" p4:type="q6:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">{90D88526-8888-46AB-AA50-3824897CBA2D}</Value>
+              </Property>
+              <Property>
+                <Name>IsPathRendered</Name>
+                <Value xmlns:q7="http://www.w3.org/2001/XMLSchema" p4:type="q7:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">true</Value>
+              </Property>
+            </ArrayOfProperty>
+          </Customization>
+        </Field>
+        <Field ID="{496EE2D5-8F4E-46C4-8BC3-8955843CA2F5}"
+                      Name="OtherIMDAuthorsTaxHidden0"
+                      Type="Note"
+                      DisplayName="OtherIMDAuthors_0"
+                      ShowInViewForms="FALSE"
+                      Required="FALSE"
+                      Hidden="TRUE"
+                      CanToggleHidden="TRUE" />
+        <Field ID="{3B447A4F-AC66-4C95-8741-098AE2BDECF3}"
+                Name="OtherIMDAuthors"
+                StaticName="OtherIMDAuthors"
+                DisplayName="OtherIMDAuthors"
+                Hidden="FALSE"
+                Required="TRUE"
+                Group="KMS Site Columns"
+                Type="TaxonomyFieldType"
+                ShowField="Term1033" >
+          <Customization>
+            <ArrayOfProperty>
+              <Property>
+                <Name>SspId</Name>
+
+                <Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p4:type="q1:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">e3b6382683404cce8013adc97b7aa1ba</Value>
+              </Property>
+              <Property>
+                <Name>TermSetId</Name>
+
+                <Value xmlns:q2="http://www.w3.org/2001/XMLSchema" p4:type="q2:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">9428919c-9de7-4a9e-9cf7-9c7b3ead523d</Value>
+              </Property>
+              <Property>
+                <Name>TextField</Name>
+
+                <Value xmlns:q6="http://www.w3.org/2001/XMLSchema" p4:type="q6:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">{496EE2D5-8F4E-46C4-8BC3-8955843CA2F5}</Value>
+              </Property>
+              <Property>
+                <Name>IsPathRendered</Name>
+                <Value xmlns:q7="http://www.w3.org/2001/XMLSchema" p4:type="q7:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">true</Value>
+              </Property>
+            </ArrayOfProperty>
+          </Customization>
+        </Field>
+        <Field ID="{6BD4083B-945F-4C5E-845E-AB352A887E93}"
+                            Name="ExternalAuthorsTaxHidden0"
+                            Type="Note"
+                            DisplayName="ExternalAuthors_0"
+                            ShowInViewForms="FALSE"
+                            Required="FALSE"
+                            Hidden="TRUE"
+                            CanToggleHidden="TRUE" />
+        <Field ID="{6D47F5FD-6EEF-4E77-9693-393ADFA5AA0F}"
+                Name="ExternalAuthors"
+                StaticName="ExternalAuthors"
+                DisplayName="ExternalAuthors"
+                Hidden="FALSE"
+                Required="TRUE"
+                Group="KMS Site Columns"
+                Type="TaxonomyFieldType"
+                ShowField="Term1033" >
+          <Customization>
+            <ArrayOfProperty>
+              <Property>
+                <Name>SspId</Name>
+
+                <Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p4:type="q1:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">e3b6382683404cce8013adc97b7aa1ba</Value>
+              </Property>
+              <Property>
+                <Name>TermSetId</Name>
+
+                <Value xmlns:q2="http://www.w3.org/2001/XMLSchema" p4:type="q2:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">9428919c-9de7-4a9e-9cf7-9c7b3ead523d</Value>
+              </Property>
+              <Property>
+                <Name>TextField</Name>
+
+                <Value xmlns:q6="http://www.w3.org/2001/XMLSchema" p4:type="q6:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">{6BD4083B-945F-4C5E-845E-AB352A887E93}</Value>
+              </Property>
+              <Property>
+                <Name>IsPathRendered</Name>
+                <Value xmlns:q7="http://www.w3.org/2001/XMLSchema" p4:type="q7:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">true</Value>
+              </Property>
+            </ArrayOfProperty>
+          </Customization>
+        </Field>
+
+        <Field ID="{A78AB26E-6731-481B-8CFC-36D685404550}"
+                           Name="CopyrightOwnerHidden0"
+                           Type="Note"
+                           DisplayName="CopyrightOwner_0"
+                           ShowInViewForms="FALSE"
+                           Required="FALSE"
+                           Hidden="TRUE"
+                           CanToggleHidden="TRUE" />
+        <Field ID="{E487D1F1-2F7E-4A40-8B94-F05C188F2077}"
+               Name="CopyrightOwner"
+               StaticName="CopyrightOwner"
+               DisplayName="CopyrightOwner"
+               Hidden="FALSE"
+               Required="TRUE"
+               Group="KMS Site Columns"
+               Type="TaxonomyFieldType"
+               ShowField="Term1033" >
+          <Customization>
+            <ArrayOfProperty>
+              <Property>
+                <Name>SspId</Name>
+
+                <Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p4:type="q1:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">e3b6382683404cce8013adc97b7aa1ba</Value>
+              </Property>
+              <Property>
+                <Name>TermSetId</Name>
+
+                <Value xmlns:q2="http://www.w3.org/2001/XMLSchema" p4:type="q2:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">9428919c-9de7-4a9e-9cf7-9c7b3ead523d</Value>
+              </Property>
+              <Property>
+                <Name>TextField</Name>
+
+                <Value xmlns:q6="http://www.w3.org/2001/XMLSchema" p4:type="q6:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">{A78AB26E-6731-481B-8CFC-36D685404550}</Value>
+              </Property>
+              <Property>
+                <Name>IsPathRendered</Name>
+                <Value xmlns:q7="http://www.w3.org/2001/XMLSchema" p4:type="q7:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">true</Value>
+              </Property>
+            </ArrayOfProperty>
+          </Customization>
+        </Field>
+        <Field ID="{5F1161E0-EDED-4616-8747-114EA0082AF9}"
+                           Name="CopyrightYearHidden0"
+                           Type="Note"
+                           DisplayName="CopyrightYear_0"
+                           ShowInViewForms="FALSE"
+                           Required="FALSE"
+                           Hidden="TRUE"
+                           CanToggleHidden="TRUE" />
+        <Field ID="{7F0A7A21-FD6A-47BD-A302-2B8D63E06051}"
+               Name="CopyrightYear"
+               StaticName="CopyrightYear"
+               DisplayName="CopyrightYear"
+               Hidden="FALSE"
+               Required="TRUE"
+               Group="KMS Site Columns"
+               Type="TaxonomyFieldType"
+               ShowField="Term1033" >
+          <Customization>
+            <ArrayOfProperty>
+              <Property>
+                <Name>SspId</Name>
+
+                <Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p4:type="q1:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">e3b6382683404cce8013adc97b7aa1ba</Value>
+              </Property>
+              <Property>
+                <Name>TermSetId</Name>
+                <Value xmlns:q2="http://www.w3.org/2001/XMLSchema" p4:type="q2:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">3cf1914e-8f61-4eb2-abed-039281bc3d10</Value>
+              </Property>
+              <Property>
+                <Name>TextField</Name>
+                <Value xmlns:q6="http://www.w3.org/2001/XMLSchema" p4:type="q6:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">{5F1161E0-EDED-4616-8747-114EA0082AF9}</Value>
+              </Property>
+              <Property>
+                <Name>IsPathRendered</Name>
+                <Value xmlns:q7="http://www.w3.org/2001/XMLSchema" p4:type="q7:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">true</Value>
+              </Property>
+            </ArrayOfProperty>
+          </Customization>
+        </Field>
+
+        <Field ID="{C767D70E-4C88-4982-B7D2-693E1297626C}"
+                          Name="IMDCompanyTaxHidden0"
+                          Type="Note"
+                          DisplayName="IMDCompany_0"
+                          ShowInViewForms="FALSE"
+                          Required="FALSE"
+                          Hidden="TRUE"
+                          CanToggleHidden="TRUE" />
+        <Field ID="{40A75403-C186-4B57-A86C-26FF6088D32C}"
+                Name="IMDCompany"
+                StaticName="IMDCompany"
+                DisplayName="IMDCompany"
+                Hidden="FALSE"
+                Required="TRUE"
+                Group="KMS Site Columns"
+                Type="TaxonomyFieldType"
+                ShowField="Term1033" >
+          <Customization>
+            <ArrayOfProperty>
+              <Property>
+                <Name>SspId</Name>
+                <Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p4:type="q1:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">e3b6382683404cce8013adc97b7aa1ba</Value>
+              </Property>
+              <Property>
+                <Name>TermSetId</Name>
+                <Value xmlns:q2="http://www.w3.org/2001/XMLSchema" p4:type="q2:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">2d713c46-2bd8-4c38-bf9c-0f92be425073</Value>
+              </Property>
+              <Property>
+                <Name>TextField</Name>
+                <Value xmlns:q6="http://www.w3.org/2001/XMLSchema" p4:type="q6:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">{C767D70E-4C88-4982-B7D2-693E1297626C}</Value>
+              </Property>
+              <Property>
+                <Name>IsPathRendered</Name>
+                <Value xmlns:q7="http://www.w3.org/2001/XMLSchema" p4:type="q7:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">true</Value>
+              </Property>
+            </ArrayOfProperty>
+          </Customization>
+        </Field>
+        <Field ID="{C3F3E659-3DA9-40C0-9265-7A30AC86D595}"
+                                  Name="MainIndustryCategoryTaxHidden0"
+                                  Type="Note"
+                                  DisplayName="MainIndustryCategory_0"
+                                  ShowInViewForms="FALSE"
+                                  Required="FALSE"
+                                  Hidden="TRUE"
+                                  CanToggleHidden="TRUE" />
+        <Field ID="{5ADE0F24-AE76-48A6-952C-575A93829E0F}"
+                Name="MainIndustryCategory"
+                StaticName="MainIndustryCategory"
+                DisplayName="MainIndustryCategory"
+                Hidden="FALSE"
+                Required="TRUE"
+                Group="KMS Site Columns"
+                Type="TaxonomyFieldType"
+                ShowField="Term1033" >
+          <Customization>
+            <ArrayOfProperty>
+              <Property>
+                <Name>SspId</Name>
+                <Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p4:type="q1:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">e3b6382683404cce8013adc97b7aa1ba</Value>
+              </Property>
+              <Property>
+                <Name>TermSetId</Name>
+                <Value xmlns:q2="http://www.w3.org/2001/XMLSchema" p4:type="q2:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">86a615af-27d2-445d-81f6-486347d38843</Value>
+              </Property>
+              <Property>
+                <Name>TextField</Name>
+                <Value xmlns:q6="http://www.w3.org/2001/XMLSchema" p4:type="q6:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">{C3F3E659-3DA9-40C0-9265-7A30AC86D595}</Value>
+              </Property>
+              <Property>
+                <Name>IsPathRendered</Name>
+                <Value xmlns:q7="http://www.w3.org/2001/XMLSchema" p4:type="q7:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">true</Value>
+              </Property>
+            </ArrayOfProperty>
+          </Customization>
+        </Field>
+        <Field ID="{7F558F68-7C8A-4366-9592-46D4859A997A}"
+                                  Name="IndustryCategoryTaxHidden0"
+                                  Type="Note"
+                                  DisplayName="IndustryCategory_0"
+                                  ShowInViewForms="FALSE"
+                                  Required="FALSE"
+                                  Hidden="TRUE"
+                                  CanToggleHidden="TRUE" />
+        <Field ID="{0C7DFA94-873B-4E90-85C7-6B3F5BEB6A62}"
+                Name="IndustryCategory"
+                StaticName="IndustryCategory"
+                DisplayName="IndustryCategory"
+                Hidden="FALSE"
+                Required="TRUE"
+                Group="KMS Site Columns"
+                Type="TaxonomyFieldType"
+                ShowField="Term1033" >
+          <Customization>
+            <ArrayOfProperty>
+              <Property>
+                <Name>SspId</Name>
+
+                <Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p4:type="q1:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">e3b6382683404cce8013adc97b7aa1ba</Value>
+              </Property>
+              <Property>
+                <Name>TermSetId</Name>
+
+                <Value xmlns:q2="http://www.w3.org/2001/XMLSchema" p4:type="q2:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">9e2dd028-5386-4801-8af1-3d0eace26af0</Value>
+              </Property>
+              <Property>
+                <Name>TextField</Name>
+
+                <Value xmlns:q6="http://www.w3.org/2001/XMLSchema" p4:type="q6:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">{7F558F68-7C8A-4366-9592-46D4859A997A}</Value>
+              </Property>
+              <Property>
+                <Name>IsPathRendered</Name>
+                <Value xmlns:q7="http://www.w3.org/2001/XMLSchema" p4:type="q7:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">true</Value>
+              </Property>
+            </ArrayOfProperty>
+          </Customization>
+        </Field>
+        <Field ID="{A52FF0E6-CAEE-424C-A911-EF6EBC34E696}"
+                Name="IMDRegionTaxHidden0"
+                Type="Note"
+                DisplayName="IMDRegion_0"
+                ShowInViewForms="FALSE"
+                Required="FALSE"
+                Hidden="TRUE"
+                CanToggleHidden="TRUE" />
+        <Field ID="{9452E650-0206-41A3-AF2F-B2DB2493BDA9}"
+                Name="IMDRegion"
+                StaticName="IMDRegion"
+                DisplayName="IMDRegion"
+                Hidden="FALSE"
+                Required="TRUE"
+                Group="KMS Site Columns"
+                Type="TaxonomyFieldType"
+                ShowField="Term1033" >
+          <Customization>
+            <ArrayOfProperty>
+              <Property>
+                <Name>SspId</Name>
+
+                <Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p4:type="q1:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">e3b6382683404cce8013adc97b7aa1ba</Value>
+              </Property>
+              <Property>
+                <Name>TermSetId</Name>
+
+                <Value xmlns:q2="http://www.w3.org/2001/XMLSchema" p4:type="q2:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">f8c172b4-bb5e-4a90-bb63-306be14b6829</Value>
+              </Property>
+              <Property>
+                <Name>TextField</Name>
+
+                <Value xmlns:q6="http://www.w3.org/2001/XMLSchema" p4:type="q6:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">{A52FF0E6-CAEE-424C-A911-EF6EBC34E696}</Value>
+              </Property>
+              <Property>
+                <Name>IsPathRendered</Name>
+                <Value xmlns:q7="http://www.w3.org/2001/XMLSchema" p4:type="q7:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">true</Value>
+              </Property>
+            </ArrayOfProperty>
+          </Customization>
+        </Field>
+        <Field ID="{4B0231A3-88E1-4884-8C02-E231CAEDC09E}"
+                        Name="IMDCountryTaxHidden0"
+                        Type="Note"
+                        DisplayName="IMDCountry_0"
+                        ShowInViewForms="FALSE"
+                        Required="FALSE"
+                        Hidden="TRUE"
+                        CanToggleHidden="TRUE" />
+        <Field ID="{8D9869E0-DB96-4A53-80DE-AE87498CF5B2}"
+                Name="IMDCountry"
+                StaticName="IMDCountry"
+                DisplayName="IMDCountry"
+                Hidden="FALSE"
+                Required="TRUE"
+                Group="KMS Site Columns"
+                Type="TaxonomyFieldType"
+                ShowField="Term1033" >
+          <Customization>
+            <ArrayOfProperty>
+              <Property>
+                <Name>SspId</Name>
+
+                <Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p4:type="q1:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">e3b6382683404cce8013adc97b7aa1ba</Value>
+              </Property>
+              <Property>
+                <Name>TermSetId</Name>
+                <Value xmlns:q2="http://www.w3.org/2001/XMLSchema" p4:type="q2:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">9e26f80d-0bec-4de1-b681-54026e854259</Value>
+              </Property>
+              <Property>
+                <Name>TextField</Name>
+                <Value xmlns:q6="http://www.w3.org/2001/XMLSchema" p4:type="q6:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">{4B0231A3-88E1-4884-8C02-E231CAEDC09E}</Value>
+              </Property>
+              <Property>
+                <Name>IsPathRendered</Name>
+                <Value xmlns:q7="http://www.w3.org/2001/XMLSchema" p4:type="q7:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">true</Value>
+              </Property>
+            </ArrayOfProperty>
+          </Customization>
+        </Field>
+        <Field ID="{FEC84437-7B94-48B6-85D7-E547AF467791}"
+                                Name="AvailableLanguageTaxHidden0"
+                                Type="Note"
+                                DisplayName="AvailableLanguage_0"
+                                ShowInViewForms="FALSE"
+                                Required="FALSE"
+                                Hidden="TRUE"
+                                CanToggleHidden="TRUE" />
+        <Field ID="{3E1AE61E-2DF2-4C75-832A-BA5BB2464FA2}"
+                Name="AvailableLanguage"
+                StaticName="AvailableLanguage"
+                DisplayName="AvailableLanguage"
+                Hidden="FALSE"
+                Required="TRUE"
+                Group="KMS Site Columns"
+                Type="TaxonomyFieldType"
+                ShowField="Term1033" >
+          <Customization>
+            <ArrayOfProperty>
+              <Property>
+                <Name>SspId</Name>
+
+                <Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p4:type="q1:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">e3b6382683404cce8013adc97b7aa1ba</Value>
+              </Property>
+              <Property>
+                <Name>TermSetId</Name>
+
+                <Value xmlns:q2="http://www.w3.org/2001/XMLSchema" p4:type="q2:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">10ac2721-fd3e-44a7-bec0-8c23b352d016</Value>
+              </Property>
+              <Property>
+                <Name>TextField</Name>
+
+                <Value xmlns:q6="http://www.w3.org/2001/XMLSchema" p4:type="q6:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">{FEC84437-7B94-48B6-85D7-E547AF467791}</Value>
+              </Property>
+              <Property>
+                <Name>IsPathRendered</Name>
+                <Value xmlns:q7="http://www.w3.org/2001/XMLSchema" p4:type="q7:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">true</Value>
+              </Property>
+            </ArrayOfProperty>
+          </Customization>
+        </Field>
+        <Field ID="{75E3E4E3-D3D0-489D-99EC-A4C7ECDA6223}"
+                                        Name="IMDCenterTaxHidden0"
+                                        Type="Note"
+                                        DisplayName="IMDCenter_0"
+                                        ShowInViewForms="FALSE"
+                                        Required="FALSE"
+                                        Hidden="TRUE"
+                                        CanToggleHidden="TRUE" />
+        <Field ID="{DEE743D2-6BA5-4CB4-B3A4-C4C935E129EF}"
+                Name="IMDCenter"
+                StaticName="IMDCenter"
+                DisplayName="IMDCenter"
+                Hidden="FALSE"
+                Required="TRUE"
+                Group="KMS Site Columns"
+                Type="TaxonomyFieldType"
+                ShowField="Term1033" >
+          <Customization>
+            <ArrayOfProperty>
+              <Property>
+                <Name>SspId</Name>
+
+                <Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p4:type="q1:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">e3b6382683404cce8013adc97b7aa1ba</Value>
+              </Property>
+              <Property>
+                <Name>TermSetId</Name>
+
+                <Value xmlns:q2="http://www.w3.org/2001/XMLSchema" p4:type="q2:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">a7c5b427-2a68-469a-88c9-0668a7eb175b</Value>
+              </Property>
+              <Property>
+                <Name>TextField</Name>
+
+                <Value xmlns:q6="http://www.w3.org/2001/XMLSchema" p4:type="q6:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">{75E3E4E3-D3D0-489D-99EC-A4C7ECDA6223}</Value>
+              </Property>
+              <Property>
+                <Name>IsPathRendered</Name>
+                <Value xmlns:q7="http://www.w3.org/2001/XMLSchema" p4:type="q7:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">true</Value>
+              </Property>
+            </ArrayOfProperty>
+          </Customization>
+        </Field>
+        <Field ID="{A45FB835-8CA5-4241-9B21-CA4B70FD537E}"
+              Name="SeriesTaxHidden0"
+              Type="Note"
+              DisplayName="Series_0"
+              ShowInViewForms="FALSE"
+              Required="FALSE"
+              Hidden="TRUE"
+              CanToggleHidden="TRUE" />
+        <Field ID="{3DC2B2C9-0FAD-42D9-8F5F-6CFEA8B1F8D4}"
+                Name="Series"
+                StaticName="Series"
+                DisplayName="Series"
+                Hidden="FALSE"
+                Required="TRUE"
+                Group="KMS Site Columns"
+                Type="TaxonomyFieldType"
+                ShowField="Term1033" >
+          <Customization>
+            <ArrayOfProperty>
+              <Property>
+                <Name>SspId</Name>
+
+                <Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p4:type="q1:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">e3b6382683404cce8013adc97b7aa1ba</Value>
+              </Property>
+              <Property>
+                <Name>TermSetId</Name>
+
+                <Value xmlns:q2="http://www.w3.org/2001/XMLSchema" p4:type="q2:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">13386b45-ee16-4492-b6f8-32194e1c0b53</Value>
+              </Property>
+              <Property>
+                <Name>TextField</Name>
+
+                <Value xmlns:q6="http://www.w3.org/2001/XMLSchema" p4:type="q6:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">{A45FB835-8CA5-4241-9B21-CA4B70FD537E}</Value>
+              </Property>
+              <Property>
+                <Name>IsPathRendered</Name>
+                <Value xmlns:q7="http://www.w3.org/2001/XMLSchema" p4:type="q7:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">true</Value>
+              </Property>
+            </ArrayOfProperty>
+          </Customization>
+        </Field>
+        <Field ID="{C1B76646-22E9-4C6E-858F-C4691530C504}"
+                      Name="DistributorTaxHidden0"
+                      Type="Note"
+                      DisplayName="Distributor_0"
+                      ShowInViewForms="FALSE"
+                      Required="FALSE"
+                      Hidden="TRUE"
+                      CanToggleHidden="TRUE" />
+        <Field ID="{02B945C8-BF50-4C6E-BAD4-6AF2DB89A2D6}"
+                Name="Distributor"
+                StaticName="Distributor"
+                DisplayName="Distributor"
+                Hidden="FALSE"
+                Required="TRUE"
+                Group="KMS Site Columns"
+                Type="TaxonomyFieldType"
+                ShowField="Term1033" >
+          <Customization>
+            <ArrayOfProperty>
+              <Property>
+                <Name>SspId</Name>
+
+                <Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p4:type="q1:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">e3b6382683404cce8013adc97b7aa1ba</Value>
+              </Property>
+              <Property>
+                <Name>TermSetId</Name>
+
+                <Value xmlns:q2="http://www.w3.org/2001/XMLSchema" p4:type="q2:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">4d9233c8-5364-4ed0-9239-963d7c1c8490</Value>
+              </Property>
+              <Property>
+                <Name>TextField</Name>
+
+                <Value xmlns:q6="http://www.w3.org/2001/XMLSchema" p4:type="q6:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">{C1B76646-22E9-4C6E-858F-C4691530C504}</Value>
+              </Property>
+              <Property>
+                <Name>IsPathRendered</Name>
+                <Value xmlns:q7="http://www.w3.org/2001/XMLSchema" p4:type="q7:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">true</Value>
+              </Property>
+            </ArrayOfProperty>
+          </Customization>
+        </Field>
+
+        <Field ID="{A9C88BD0-3212-4E6D-8D83-A69AC0C33E88}"
+                      Name="DistributionPolicyTaxHidden0"
+                      Type="Note"
+                      DisplayName="DistributionPolicy_0"
+                      ShowInViewForms="FALSE"
+                      Required="FALSE"
+                      Hidden="TRUE"
+                      CanToggleHidden="TRUE" />
+        <Field ID="{1F1CD07B-1FD7-4E8B-A85B-F7A9DF214CC2}"
+                Name="DistributionPolicy"
+                StaticName="DistributionPolicy"
+                DisplayName="DistributionPolicy"
+                Hidden="FALSE"
+                Required="TRUE"
+                Group="KMS Site Columns"
+                Type="TaxonomyFieldType"
+                ShowField="Term1033" >
+          <Customization>
+            <ArrayOfProperty>
+              <Property>
+                <Name>SspId</Name>
+
+                <Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p4:type="q1:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">e3b6382683404cce8013adc97b7aa1ba</Value>
+              </Property>
+              <Property>
+                <Name>TermSetId</Name>
+
+                <Value xmlns:q2="http://www.w3.org/2001/XMLSchema" p4:type="q2:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">db10f309-842f-471b-9821-6dd73ed29e93</Value>
+              </Property>
+              <Property>
+                <Name>TextField</Name>
+
+                <Value xmlns:q6="http://www.w3.org/2001/XMLSchema" p4:type="q6:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">{A9C88BD0-3212-4E6D-8D83-A69AC0C33E88}</Value>
+              </Property>
+              <Property>
+                <Name>IsPathRendered</Name>
+                <Value xmlns:q7="http://www.w3.org/2001/XMLSchema" p4:type="q7:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">true</Value>
+              </Property>
+            </ArrayOfProperty>
+          </Customization>
+        </Field>
+
+        <Field ID="{CE1D8A68-0F89-4961-8A1E-FBD0DE45DEF0}"
+                              Name="CaseVersionTaxHidden0"
+                              Type="Note"
+                              DisplayName="CaseVersion_0"
+                              ShowInViewForms="FALSE"
+                              Required="FALSE"
+                              Hidden="TRUE"
+                              CanToggleHidden="TRUE" />
+        <Field ID="{C3304EAE-2806-4944-B7D9-9026CB0A244F}"
+                Name="CaseVersion"
+                StaticName="CaseVersion"
+                DisplayName="CaseVersion"
+                Hidden="FALSE"
+                Required="TRUE"
+                Group="KMS Site Columns"
+                Type="TaxonomyFieldType"
+                ShowField="Term1033" >
+          <Customization>
+            <ArrayOfProperty>
+              <Property>
+                <Name>SspId</Name>
+
+                <Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p4:type="q1:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">e3b6382683404cce8013adc97b7aa1ba</Value>
+              </Property>
+              <Property>
+                <Name>TermSetId</Name>
+
+                <Value xmlns:q2="http://www.w3.org/2001/XMLSchema" p4:type="q2:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">6704796f-5f12-4659-975e-0a22acf5fd36</Value>
+              </Property>
+              <Property>
+                <Name>TextField</Name>
+
+                <Value xmlns:q6="http://www.w3.org/2001/XMLSchema" p4:type="q6:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">{CE1D8A68-0F89-4961-8A1E-FBD0DE45DEF0}</Value>
+              </Property>
+              <Property>
+                <Name>IsPathRendered</Name>
+                <Value xmlns:q7="http://www.w3.org/2001/XMLSchema" p4:type="q7:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">true</Value>
+              </Property>
+            </ArrayOfProperty>
+          </Customization>
+        </Field>
+
+
+        <!--Normal Site Columns-->
+        <Field ID="{11B9797E-2EC7-4DF6-84E5-A55F07C4BE1B}" Name="DocID" StaticName="DocID" DisplayName="Doc ID" Group="KMS Site Columns" Type="Text" />
+        <Field ID="{721BB1C8-75D8-471E-86FE-2ECCE6D44340}" Name="Abstract" StaticName="Abstract" DisplayName="Abstract" Group="KMS Site Columns" Type="Note" />
+        <Field ID="{2359ED9E-8ABF-4EBC-AA1A-09568731B0C9}" Name="PublishingDate" StaticName="PublishingDate" DisplayName="PublishingDate" Group="KMS Site Columns" Type="DateTime" />
+        <Field ID="{989113B5-E1C4-4A1D-BDEE-A4CCFC9E3E01}" Name="RelatedObjects" StaticName="RelatedObjects" DisplayName="RelatedObjects" Group="KMS Site Columns" Type="URL" />
+        <Field ID="{1AC60D29-393F-4AFD-BF14-4EAD3BDE061F}" Name="IMDOutputCollection" StaticName="IMDOutputCollection" DisplayName="IMD Output Collection" Group="KMS Site Columns" Type="Text" />
+        <Field ID="{E370E2CB-C707-4367-B171-6341F5FD4E75}" Name="LengthPages" StaticName="Length(Pages)" DisplayName="Length(Pages)" Group="KMS Site Columns" Type="Number" />
+        <Field ID="{22985F09-C70A-4036-A08B-69922F057A1D}" Name="Lengthwords" StaticName="Length(words)" DisplayName="Length(words)" Group="KMS Site Columns" Type="Number" />
+        <Field ID="{08A6C7DF-48B0-4ABA-ACBA-0696D0EA1B61}" Name="Lengthminutes" StaticName="Length(minutes)" DisplayName="Length(minutes)" Group="KMS Site Columns" Type="Number" />
+        <Field ID="{390CDA52-D5DA-45D6-AD59-6A463F2067CA}" Name="LinktoOriginal" StaticName="LinktoOriginal" DisplayName="LinktoOriginal" Group="KMS Site Columns" Type="URL" />
+        <Field ID="{5B2997A7-BCDB-4CAF-B23E-2C8B89CDDED7}" Name="Note/remarks" StaticName="Note/remarks" DisplayName="Note/remarks" Group="KMS Site Columns" Type="Note" />
+        <Field ID="{9AA459C1-0737-492D-A8B8-16B22F8E9E83}" Name="ShowinFacultyVitaePage" StaticName="ShowinFacultyVitaePage" DisplayName="ShowinFacultyVitae Page" Group="KMS Site Columns" Type="Boolean" />
+        <Field ID="{D5361B0F-688F-41E9-9B4A-66EBEA47370C}" Name="ListedOn" StaticName="ListedOn" DisplayName="ListedOn" Group="KMS Site Columns" Type="Note" />
+        <Field ID="{067BC482-56C7-42F7-A0D6-703954261D2C}" Name="AwardList" StaticName="AwardList" DisplayName="AwardList" Group="KMS Site Columns" Type="Note" />
+        <Field ID="{7B3C5A4F-D429-4853-A90F-60F7ACAE0343}" Name="CompanySize" StaticName="CompanySize" DisplayName="Company Size" Group="KMS Site Columns" Type="Text" />
+        <Field ID="{7839B027-E42C-4B64-A98B-B8E9E154B9B3}" Name="Relatedmaterial" StaticName="Relatedmaterial" DisplayName="Relatedmaterial" Group="KMS Site Columns" Type="URL" />
+        <Field ID="{33368039-7016-46E9-ADC7-7990F8A9389C}" Name="ArticleCategory" StaticName="ArticleCategory" DisplayName="ArticleCategory" Group="KMS Site Columns" Type="Text" />
+        <Field ID="{BE35A1C1-0A30-45EC-B761-5563F7789E4B}" Name="subtitle" StaticName="subtitle" DisplayName="subtitle" Group="KMS Site Columns" Type="Text" />
+        <Field ID="{89FF66E8-7F92-4919-85D6-F970C95EA413}" Name="PublishedIn" StaticName="PublishedIn" DisplayName="Published In" Group="KMS Site Columns" Type="Text" />
+        <Field ID="{C2948B23-187E-430F-A187-0258D1E32381}" Name="PublishedURL" StaticName="PublishedURL" DisplayName="Published URL" Group="KMS Site Columns" Type="URL" />
+        <Field ID="{6FC15727-DBBC-4E6E-AB26-AB71F4850816}" Name="BibliomakerID" StaticName="BibliomakerID" DisplayName="Bibliomaker ID" Group="KMS Site Columns" Type="Text" />
+        <Field ID="{B07EB40A-CFC9-4E59-B64D-5BD52E9B3466}" Name="AdminNote(s)" StaticName="AdminNote(s)" DisplayName="Admin Note(s)" Group="KMS Site Columns" Type="Text" />
+        <Field ID="{CB4B16C2-604D-4D97-A7F5-7E0B0DABF458}" Name="CaseSeries" StaticName="CaseSeries" DisplayName="CaseSeries" Group="KMS Site Columns" Type="Text" />
+        <Field ID="{2C904695-EC9E-40FF-A1DF-B4ED0D99056E}" Name="LearningObjective" StaticName="LearningObjective" DisplayName="Learning Objective" Group="KMS Site Columns" Type="Text" />
+        <Field ID="{EA181FCC-18CC-481E-8094-4C476599B262}" Name="DistributionStatus" StaticName="DistributionStatus" DisplayName="Distribution Status" Group="KMS Site Columns" Type="Text" />
+        <Field ID="{4D14957D-DF3B-4FAF-887D-614A7347110A}" Name="Distributed" StaticName="Distributed" DisplayName="Distributed" Group="KMS Site Columns" Type="Text" />
+        <Field ID="{AE53F613-2ADF-461E-B113-C5B647A8BEE3}" Name="ReleaseDate" StaticName="ReleaseDate" DisplayName="Release Date" Group="KMS Site Columns" Type="DateTime" />
+        <Field ID="{855CD843-216D-4171-89D2-19DB36E9B00F}" Name="ReleaseStatus" StaticName="ReleaseStatus" DisplayName="Release Status" Group="KMS Site Columns" Type="Text" />
+        <Field ID="{4464B642-CE9A-48EC-B942-4962D9580963}" Name="AvailableVersions" StaticName="AvailableVersions" DisplayName="Available Versions" Group="KMS Site Columns" Type="Text" />
+        <Field ID="{0E7A11C8-EA09-4368-A849-9DD44E7236DF}" Name="HasTeachingNote" StaticName="HasTeachingNote" DisplayName="HasTeachingNote" Group="KMS Site Columns" Type="Boolean" />
+        <Field ID="{4ADD2C21-7A0C-419B-BD41-0819F64AED31}" Name="Hasvideo" StaticName="Hasvideo" DisplayName="Hasvideo" Group="KMS Site Columns" Type="Boolean" />
+        <Field ID="{92BA50A9-1D09-4D2D-BBCF-A78712ACB2BA}" Name="EmbeddedintheCase" StaticName="EmbeddedintheCase" DisplayName="EmbeddedintheCase" Group="KMS Site Columns" Type="Boolean" />
+        <Field ID="{EDD71D58-1126-4A9D-94D8-0A9662377A58}" Name="ReferencedintheTN" StaticName="ReferencedintheTN" DisplayName="ReferencedintheTN" Group="KMS Site Columns" Type="Boolean" />
+        <Field ID="{8E36FBBE-8421-49C9-85E8-8852B6E8E368}" Name="TimeFrame" StaticName="TimeFrame" DisplayName="TimeFrame" Group="KMS Site Columns" Type="Text" />
+        <Field ID="{1C8EF037-B843-4E82-80D9-FC81B4448FC4}" Name="CaseCategory" StaticName="CaseCategory" DisplayName="Case Category" Group="KMS Site Columns" Type="Lookup" List="CategoryMaster" ShowField="Category" />
+      </pnp:SiteFields>
+      <pnp:ContentTypes>
+        <pnp:ContentType ID="0x01002D415D16908E4116B6E2A940036C2028"
+                         Name="KMA CT"
+                         Description="This is base content type for all KMS Assets"
+                         Group="KMS Content Types"
+                         Inherits="TRUE"
+                         Version="0">
+        </pnp:ContentType>
+        <pnp:ContentType ID="0x01002D415D16908E4116B6E2A940036C20280080DB087266A240829DF6311D1DE4BEDB"
+                         Name="CASE STUDY"
+                         Description="Base Content type for all Case Study Assets"
+                         Group="KMS Content Types"
+                         Inherits="TRUE"
+                         Version="0">
+          <pnp:FieldRefs>
+            <pnp:FieldRef ID="0D38493A-7DA2-4AFA-9D4C-353D0392A55E" Name="IMDLanguage" />
+            <pnp:FieldRef ID="721BB1C8-75D8-471E-86FE-2ECCE6D44340" Name="Abstract" />
+            <pnp:FieldRef ID="889C7AAD-F3D2-499B-AD3E-BBE212EE499A" Name="IMDSubjectTopics" />
+            <pnp:FieldRef ID="4620148A-4EF8-439C-BF6A-325C237C9B0A" Name="IMDAuthors" />
+            <pnp:FieldRef ID="B724917C-E1F5-4D88-AAC6-48882AFB27F0" Name="IMDFacultyAuthors" />
+            <pnp:FieldRef ID="83639B2C-69A1-4C61-A096-56DAFA725E80" Name="RnDAuthors" />
+            <pnp:FieldRef ID="3B447A4F-AC66-4C95-8741-098AE2BDECF3" Name="OtherIMDAuthors" />
+            <pnp:FieldRef ID="6D47F5FD-6EEF-4E77-9693-393ADFA5AA0F" Name="ExternalAuthors" />
+            <pnp:FieldRef ID="2359ED9E-8ABF-4EBC-AA1A-09568731B0C9" Name="PublishingDate" />
+            <pnp:FieldRef ID="E487D1F1-2F7E-4A40-8B94-F05C188F2077" Name="CopyrightOwner" />
+            <pnp:FieldRef ID="7F0A7A21-FD6A-47BD-A302-2B8D63E06051" Name="CopyrightYear" /> 
+            <pnp:FieldRef ID="989113B5-E1C4-4A1D-BDEE-A4CCFC9E3E01" Name="RelatedObjects" />
+            <pnp:FieldRef ID="1AC60D29-393F-4AFD-BF14-4EAD3BDE061F" Name="IMDOutputCollection" />
+            <pnp:FieldRef ID="40A75403-C186-4B57-A86C-26FF6088D32C" Name="IMDCompany" />
+            <pnp:FieldRef ID="5ADE0F24-AE76-48A6-952C-575A93829E0F" Name="MainIndustryCategory" />
+            <pnp:FieldRef ID="0C7DFA94-873B-4E90-85C7-6B3F5BEB6A62" Name="IndustryCategory" />
+            <pnp:FieldRef ID="9452E650-0206-41A3-AF2F-B2DB2493BDA9" Name="IMDRegion" />
+            <pnp:FieldRef ID="8D9869E0-DB96-4A53-80DE-AE87498CF5B2" Name="IMDCountry" />
+            <pnp:FieldRef ID="3E1AE61E-2DF2-4C75-832A-BA5BB2464FA2" Name="AvailableLanguage" />
+            <pnp:FieldRef ID="E370E2CB-C707-4367-B171-6341F5FD4E75" Name="LengthPages" />
+            <pnp:FieldRef ID="22985F09-C70A-4036-A08B-69922F057A1D" Name="Lengthwords" />
+            <pnp:FieldRef ID="08A6C7DF-48B0-4ABA-ACBA-0696D0EA1B61" Name="Lengthminutes" />
+            <pnp:FieldRef ID="DEE743D2-6BA5-4CB4-B3A4-C4C935E129EF" Name="IMDCenter" />
+            <pnp:FieldRef ID="390CDA52-D5DA-45D6-AD59-6A463F2067CA" Name="LinktoOriginal" />
+            <pnp:FieldRef ID="5B2997A7-BCDB-4CAF-B23E-2C8B89CDDED7" Name="Note/remarks" />
+            <pnp:FieldRef ID="9AA459C1-0737-492D-A8B8-16B22F8E9E83" Name="ShowinFacultyVitaePage" />
+            <pnp:FieldRef ID="D5361B0F-688F-41E9-9B4A-66EBEA47370C" Name="ListedOn" />
+            <pnp:FieldRef ID="067BC482-56C7-42F7-A0D6-703954261D2C" Name="AwardList" />
+            <pnp:FieldRef ID="7B3C5A4F-D429-4853-A90F-60F7ACAE0343" Name="CompanySize" />
+            <pnp:FieldRef ID="7839B027-E42C-4B64-A98B-B8E9E154B9B3" Name="Relatedmaterial" />
+            <pnp:FieldRef ID="CB4B16C2-604D-4D97-A7F5-7E0B0DABF458" Name="CaseSeries" />
+            <pnp:FieldRef ID="2C904695-EC9E-40FF-A1DF-B4ED0D99056E" Name="LearningObjective" />
+            <pnp:FieldRef ID="EA181FCC-18CC-481E-8094-4C476599B262" Name="DistributionStatus" />
+            <pnp:FieldRef ID="4D14957D-DF3B-4FAF-887D-614A7347110A" Name="Distributed" />
+            <pnp:FieldRef ID="AE53F613-2ADF-461E-B113-C5B647A8BEE3" Name="ReleaseDate" />
+            <pnp:FieldRef ID="855CD843-216D-4171-89D2-19DB36E9B00F" Name="ReleaseStatus" />
+            <pnp:FieldRef ID="4464B642-CE9A-48EC-B942-4962D9580963" Name="AvailableVersions" />
+          </pnp:FieldRefs>
+        </pnp:ContentType>
+
+        <pnp:ContentType ID="0x01002D415D16908E4116B6E2A940036C20280080DB087266A240829DF6311D1DE4BEDB00C397FDE7A95A4DCE8405EA28F72D260C"
+                         Name="CASE"
+                         Description="This is content type for all CASE Assets"
+                         Group="KMS Content Types"
+                         Version="0">
+          <pnp:FieldRefs>
+            <pnp:FieldRef ID="{0E7A11C8-EA09-4368-A849-9DD44E7236DF}" Name="HasTeachingNote" />
+            <pnp:FieldRef ID="{4ADD2C21-7A0C-419B-BD41-0819F64AED31}" Name="Hasvideo" />
+            <pnp:FieldRef ID="{8E36FBBE-8421-49C9-85E8-8852B6E8E368}" Name="TimeFrame"/>
+            <pnp:FieldRef ID="{89FF66E8-7F92-4919-85D6-F970C95EA413}" Name="PublishedIn" />
+            <pnp:FieldRef ID="{C3304EAE-2806-4944-B7D9-9026CB0A244F}" Name="CaseVersion"/>
+          </pnp:FieldRefs>
+        </pnp:ContentType>
+        <pnp:ContentType ID="0x01002D415D16908E4116B6E2A940036C20280080DB087266A240829DF6311D1DE4BEDB0085FAAD68703F41D6B0A21EF2CA84F24F"
+                           Name="RELATED MATERIAL"
+                           Description="This is content type for all Related Material Assets"
+                           Group="KMS Content Types"
+                           Version="0">
+          <pnp:FieldRefs>
+            <pnp:FieldRef ID="{92BA50A9-1D09-4D2D-BBCF-A78712ACB2BA}" Name="EmbeddedintheCase" />
+            <pnp:FieldRef ID="{EDD71D58-1126-4A9D-94D8-0A9662377A58}" Name="ReferencedintheTN" />
+            <pnp:FieldRef ID="{1F1CD07B-1FD7-4E8B-A85B-F7A9DF214CC2}" Name="DistributionPolicy"/>
+          </pnp:FieldRefs>
+        </pnp:ContentType>
+
+
+        <pnp:ContentType ID="0x01002D415D16908E4116B6E2A940036C2028005F8339CA8B7B4DA88EFC4E9ADDD3EE8D"
+                           Name="ARTICLE"
+                           Description="This is content type for all Article Assets"
+                           Group="KMS Content Types"
+                           Version="0">
+          <pnp:FieldRefs>
+            <pnp:FieldRef ID="0D38493A-7DA2-4AFA-9D4C-353D0392A55E" Name="IMDLanguage" />
+            <pnp:FieldRef ID="721BB1C8-75D8-471E-86FE-2ECCE6D44340" Name="Abstract" />
+            <pnp:FieldRef ID="889C7AAD-F3D2-499B-AD3E-BBE212EE499A" Name="IMDSubjectTopics" />
+            <pnp:FieldRef ID="4620148A-4EF8-439C-BF6A-325C237C9B0A" Name="IMDAuthors" />
+            <pnp:FieldRef ID="B724917C-E1F5-4D88-AAC6-48882AFB27F0" Name="IMDFacultyAuthors" />
+            <pnp:FieldRef ID="83639B2C-69A1-4C61-A096-56DAFA725E80" Name="RnDAuthors" />
+            <pnp:FieldRef ID="3B447A4F-AC66-4C95-8741-098AE2BDECF3" Name="OtherIMDAuthors" />
+            <pnp:FieldRef ID="6D47F5FD-6EEF-4E77-9693-393ADFA5AA0F" Name="ExternalAuthors" />
+            <pnp:FieldRef ID="2359ED9E-8ABF-4EBC-AA1A-09568731B0C9" Name="PublishingDate" />
+            <pnp:FieldRef ID="E487D1F1-2F7E-4A40-8B94-F05C188F2077" Name="CopyrightOwner" />
+            <pnp:FieldRef ID="7F0A7A21-FD6A-47BD-A302-2B8D63E06051" Name="CopyrightYear" />
+            <pnp:FieldRef ID="989113B5-E1C4-4A1D-BDEE-A4CCFC9E3E01" Name="RelatedObjects" />
+            <pnp:FieldRef ID="1AC60D29-393F-4AFD-BF14-4EAD3BDE061F" Name="IMDOutputCollection" />
+            <pnp:FieldRef ID="40A75403-C186-4B57-A86C-26FF6088D32C" Name="IMDCompany" />
+            <pnp:FieldRef ID="5ADE0F24-AE76-48A6-952C-575A93829E0F" Name="MainIndustryCategory" />
+            <pnp:FieldRef ID="0C7DFA94-873B-4E90-85C7-6B3F5BEB6A62" Name="IndustryCategory" />
+            <pnp:FieldRef ID="9452E650-0206-41A3-AF2F-B2DB2493BDA9" Name="IMDRegion" />
+            <pnp:FieldRef ID="8D9869E0-DB96-4A53-80DE-AE87498CF5B2" Name="IMDCountry" />
+            <pnp:FieldRef ID="3E1AE61E-2DF2-4C75-832A-BA5BB2464FA2" Name="AvailableLanguage" />
+            <pnp:FieldRef ID="E370E2CB-C707-4367-B171-6341F5FD4E75" Name="LengthPages" />
+            <pnp:FieldRef ID="22985F09-C70A-4036-A08B-69922F057A1D" Name="Lengthwords" />
+            <pnp:FieldRef ID="08A6C7DF-48B0-4ABA-ACBA-0696D0EA1B61" Name="Lengthminutes" />
+            <pnp:FieldRef ID="DEE743D2-6BA5-4CB4-B3A4-C4C935E129EF" Name="IMDCenter" />
+            <pnp:FieldRef ID="390CDA52-D5DA-45D6-AD59-6A463F2067CA" Name="LinktoOriginal" />
+            <pnp:FieldRef ID="5B2997A7-BCDB-4CAF-B23E-2C8B89CDDED7" Name="Note/remarks" />
+            <pnp:FieldRef ID="9AA459C1-0737-492D-A8B8-16B22F8E9E83" Name="ShowinFacultyVitaePage" />
+            <pnp:FieldRef ID="D5361B0F-688F-41E9-9B4A-66EBEA47370C" Name="ListedOn" />
+            <pnp:FieldRef ID="067BC482-56C7-42F7-A0D6-703954261D2C" Name="AwardList" />
+            <pnp:FieldRef ID="7B3C5A4F-D429-4853-A90F-60F7ACAE0343" Name="CompanySize" />
+            <pnp:FieldRef ID="7839B027-E42C-4B64-A98B-B8E9E154B9B3" Name="Relatedmaterial"/>
+            <pnp:FieldRef ID="CB4B16C2-604D-4D97-A7F5-7E0B0DABF458" Name="CaseSeries" />
+            <pnp:FieldRef ID="2C904695-EC9E-40FF-A1DF-B4ED0D99056E" Name="LearningObjective"/>
+            <pnp:FieldRef ID="EA181FCC-18CC-481E-8094-4C476599B262" Name="DistributionStatus" />
+            <pnp:FieldRef ID="4D14957D-DF3B-4FAF-887D-614A7347110A" Name="Distributed" />
+            <pnp:FieldRef ID="AE53F613-2ADF-461E-B113-C5B647A8BEE3" Name="ReleaseDate" />
+            <pnp:FieldRef ID="855CD843-216D-4171-89D2-19DB36E9B00F" Name="ReleaseStatus" />
+            <pnp:FieldRef ID="4464B642-CE9A-48EC-B942-4962D9580963" Name="AvailableVersions"/>
+            <pnp:FieldRef ID="02B945C8-BF50-4C6E-BAD4-6AF2DB89A2D6" Name="Distributor" />
+          </pnp:FieldRefs>
+        </pnp:ContentType>
+
+      </pnp:ContentTypes>
+      <pnp:Lists>
+        <pnp:ListInstance Title="RegisteredAssets" TemplateType="100" Url="Lists/RegisteredAssets" MinorVersionLimit="0" MaxVersionLimit="0" DraftVersionVisibility="0" RemoveExistingContentTypes="true" ContentTypesEnabled="true">
+          <pnp:ContentTypeBindings>
+            <pnp:ContentTypeBinding ContentTypeID="0x01002D415D16908E4116B6E2A940036C20280080DB087266A240829DF6311D1DE4BEDB00C397FDE7A95A4DCE8405EA28F72D260C"/>
+            <pnp:ContentTypeBinding ContentTypeID="0x01002D415D16908E4116B6E2A940036C20280080DB087266A240829DF6311D1DE4BEDB0085FAAD68703F41D6B0A21EF2CA84F24F"/> 
+            <pnp:ContentTypeBinding ContentTypeID="0x01002D415D16908E4116B6E2A940036C2028005F8339CA8B7B4DA88EFC4E9ADDD3EE8D"/>
+          </pnp:ContentTypeBindings>
+        </pnp:ListInstance>
+
+        <!--<pnp:ListInstance Title="AssetMaster" TemplateType="100" Url="Lists/AssetMaster" MinorVersionLimit="0" MaxVersionLimit="0" DraftVersionVisibility="0" RemoveExistingContentTypes="true" ContentTypesEnabled="true">
+          <pnp:ContentTypeBindings>
+            <pnp:ContentTypeBinding ContentTypeID="0x" Default="true" />
+            <pnp:ContentTypeBinding ContentTypeID="0x0120" />
+          </pnp:ContentTypeBindings>
+          <pnp:DataRows>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Case Study</pnp:DataValue>
+              <pnp:DataValue FieldName="Asset Type">Case Study</pnp:DataValue>
+              <pnp:DataValue FieldName="Asset Version">Original</pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Case Study</pnp:DataValue>
+              <pnp:DataValue FieldName="Asset Type">Case Study</pnp:DataValue>
+              <pnp:DataValue FieldName="Asset Version">Translation</pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Case Study</pnp:DataValue>
+              <pnp:DataValue FieldName="Asset Type">Case Study</pnp:DataValue>
+              <pnp:DataValue FieldName="Asset Version">Abridged</pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Case Study</pnp:DataValue>
+              <pnp:DataValue FieldName="Asset Type">Case Study</pnp:DataValue>
+              <pnp:DataValue FieldName="Asset Version">Adaptation</pnp:DataValue>
+            </pnp:DataRow>
+          </pnp:DataRows>
+          <pnp:Fields>
+            <Field ID="{C8526B66-3496-4E0F-B411-50A41AE6E302}" Name="Asset Type"  DisplayName="Asset Type" Type="Text" />
+            <Field ID="{CB430DAD-FC19-48B2-A402-D64DA2C02CF9}" Name="Asset Version" DisplayName="Asset Version" Type="Text" />
+          </pnp:Fields>
+        </pnp:ListInstance>
+
+        <pnp:ListInstance Title="CategoryMaster" TemplateType="100" Url="Lists/CategoryMaster" MinorVersionLimit="0" MaxVersionLimit="0" DraftVersionVisibility="0" RemoveExistingContentTypes="true" ContentTypesEnabled="true">
+          <pnp:ContentTypeBindings>
+            <pnp:ContentTypeBinding ContentTypeID="0x" Default="true" />
+            <pnp:ContentTypeBinding ContentTypeID="0x0120" />
+          </pnp:ContentTypeBindings>
+          <pnp:DataRows>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Case</pnp:DataValue>
+              <pnp:DataValue FieldName="Category">Technical Note</pnp:DataValue>
+              
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Case</pnp:DataValue>
+              <pnp:DataValue FieldName="Category">Background Note</pnp:DataValue>
+              
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Related Material</pnp:DataValue>
+              <pnp:DataValue FieldName="Category">Teaching Notes</pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Related Material</pnp:DataValue>
+              <pnp:DataValue FieldName="Category">HandOut</pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Related Material</pnp:DataValue>
+              <pnp:DataValue FieldName="Category">Exercise</pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Related Material</pnp:DataValue>
+              <pnp:DataValue FieldName="Category">Presentation</pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Related Material</pnp:DataValue>
+              <pnp:DataValue FieldName="Category">Media Support</pnp:DataValue>
+            </pnp:DataRow>
+          </pnp:DataRows>
+          <pnp:Fields>
+            <Field ID="{805C0D2B-309B-42DB-838E-A27880C56CED}" Name="Category" DisplayName="Asset Category" Type="Text" />
+          </pnp:Fields>
+        </pnp:ListInstance>-->
+
+
+      </pnp:Lists>
+    </pnp:ProvisioningTemplate>
+  </pnp:Templates>
+</pnp:Provisioning>

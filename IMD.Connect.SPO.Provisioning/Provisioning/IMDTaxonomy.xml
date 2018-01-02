@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<Group Name="IMDTaxonomy" Id="CC6E1ADE-444B-4642-8AB7-BBC6DB51FEDE">
+<TermSet Name="Languages" Id="10AC2721-FD3E-44A7-BEC0-8C23B352D016">
+    <Term Id="8d8021bd-90c7-4013-a49d-d322f902d42b" Name="Germany"/>
+    <Term Id="57966c3f-8d5f-43b6-9931-eb03e1fbcf7b" Name="Italian"/>
+    <Term Id="f15e8618-0365-492d-be71-68f8a33cafe6" Name="French"/>
+	<Term Id="792ddccb-e1e2-4dc6-b8b1-c8c98a57eb9b" Name="English"/>	
+  </TermSet>
+<TermSet Name="IMDSubjectTopics" Id="9F111203-2B1F-442D-AB4F-FE877FA52CBD">
+	<Term Id="aea9440d-d1e9-45f4-857f-2d68887d4c7f" Name="Career Development" />
+	<Term Id="650c79e6-79bb-497e-b3b9-d07bad941e15" Name="Competitiveness" />
+	<Term Id="3bcdc6fc-1c05-4476-916e-cc90f6cce3ae" Name="Entrepreneurship" />
+	<Term Id="9da53d51-669a-4be3-88ff-8aafc37394b7" Name="Executive Education" />
+</TermSet>
+<TermSet Name="People" Id="9428919C-9DE7-4A9E-9CF7-9C7B3EAD523D">
+     <Term Id="74d4e722-4739-49a2-ab94-58943a333cc5" Name="Aadne, John H."/>
+	 <Term Id="15de3a29-6c31-46f4-82bb-3e323edee764" Name="Abbott, Dennis"/> 
+	 <Term Id="62870721-bf1e-4783-be9f-61593af9d7af" Name="Abbott, Roderick"/>
+	 <Term Id="161ddc85-088e-438f-812d-065c152895ce" Name="Abdallah, Ariane"/>
+	 <Term Id="af26b0e9-b328-4b6f-9b8c-0f97dc67a5a7" Name="Abou-Hamdan, Amira"/>
+</TermSet> 
+<TermSet Name="Company" Id="2d713c46-2bd8-4c38-bf9c-0f92be425073">
+	<Term Id="79307df0-9377-47b0-8703-04c34700a767" Name="Company Analysis" />
+	<Term Id="1b41078d-957e-4a16-afae-f5f3925c79af" Name="Company Background"/> 
+	<Term Id="632ad321-f3ca-4bdc-945e-4ebec30d0507" Name="Company Culture" />
+	<Term Id="57474387-4e95-4036-8639-a1f317596cb4" Name="Company Failure"/>
+	<Term Id="5367d900-3578-49e1-bfcc-cf5715eaa465" Name="Company Floatation"/>
+	<Term Id="d78266a3-102b-4ca7-8df4-ebf432276248" Name="Company Formation" />
+</TermSet>
+<TermSet Name="Main Industry Category" Id="86a615af-27d2-445d-81f6-486347d38843">
+	 <Term Id="4555c111-1f5e-432c-bbff-71c715ff0843" Name="Archive"/>
+	 <Term Id="60c04c52-e4d1-4406-8a4f-6e3ad8692fb5" Name="Brazil"/>
+	 <Term Id="cdba6016-b1a6-4843-8356-d4331e004e96" Name="Brazil Case"/>
+	 <Term Id="6b4024c8-7147-4198-9cb3-3609c655fc9a" Name="Expert Perspectives"/> 
+	 <Term Id="f68bec7d-7b4b-4178-bf84-d71d02a763e0" Name="In the Media"/>
+</TermSet>
+<TermSet Name="Industry Category" Id="9e2dd028-5386-4801-8af1-3d0eace26af0" >
+	<Term Id="59ae1de7-5063-42ac-978c-8bfcd61c251d" Name="Aerospace Industry" />
+	 <Term Id="3f7ea127-0a4d-4659-aca4-749436732a6b" Name="Agricultural Industry" />
+	 <Term Id="a7b67f6d-7b30-4542-9a9b-5b916afbc8b1" Name="Agricultural Machinery Industry" />
+	 <Term Id="dcb0ff0d-6f8e-43dc-9605-45b7eabc06e3" Name="Air Conditioning Industry" />
+	 <Term Id="bec6920e-e66d-4e13-8120-2420a48fe116" Name="Alcoholic Beverage Industry"/>
+</TermSet>
+<TermSet Name="Region" Id="f8c172b4-bb5e-4a90-bb63-306be14b6829">
+	<Term Id="5bff7d91-c3c7-4bb8-b5f2-993e561c3ebf" Name="Africa" />
+	<Term Id="0794b2d9-cc5f-4111-9318-7aced1ff5a9e" Name="America" />
+	<Term Id="8326e7fb-f1ba-45bc-9c4e-8e2eec31f71d" Name="Antarctica" />
+	<Term Id="be07e4c9-78a7-461e-9871-bcb381a59d2f" Name="Arab States" />
+	<Term Id="8dfce272-1fe0-4a29-a1d3-d84e8873b577" Name="Arabian Gulf Region"/>
+	<Term Id="345dbe9b-fa08-4687-be84-66e270797c03" Name="Europe" />
+</TermSet>
+<TermSet Name="Country" Id="9e26f80d-0bec-4de1-b681-54026e854259">
+	<Term Id="5DFA888C-0853-4550-AF99-427D2DFC604C" Name="India" />
+	<Term Id="79FF778C-4F93-479F-9FA7-CCAE3D7DD070" Name="United States" />
+	<Term Id="61EEBF8F-3185-49FB-8EDD-8A0ACB058336" Name="switzerland" />
+	<Term Id="083997FF-C098-49BB-A2CE-0A6F526780EA" Name="Sweden" />
+	<Term Id="6A2A3DC1-E71F-481C-B03F-17E38F19FC00" Name="Australia" />
+</TermSet>
+<TermSet Name="IMD Center" Id="A7C5B427-2A68-469A-88C9-0668A7EB175B">	
+	<Term Id="90D88526-8888-46AB-AA50-3824897CBA2D" Name="IMD Center1" />
+	<Term Id="496EE2D5-8F4E-46C4-8BC3-8955843CA2F5" Name="IMD Center2" />
+	<Term Id="6BD4083B-945F-4C5E-845E-AB352A887E93" Name="IMD Center3" />
+	<Term Id="C767D70E-4C88-4982-B7D2-693E1297626C" Name="IMD Center4" />
+	<Term Id="C3F3E659-3DA9-40C0-9265-7A30AC86D595" Name="IMD Center5" />
+</TermSet>
+<TermSet Name="Series" Id="13386B45-EE16-4492-B6F8-32194E1C0B53">
+	<Term Id="0F9F9F11-CDAF-467E-9491-70032A0444CD" Name="Series1" />
+	<Term Id="78D98306-1F18-48C4-977F-13BFBE769604" Name="Series2" />
+	<Term Id="462B6236-2CF7-4539-8C45-A9A886264EE9" Name="Series3" />
+</TermSet>
+<TermSet Name="Distributor" Id="4D9233C8-5364-4ED0-9239-963D7C1C8490">
+	<Term Id="0E7A11C8-EA09-4368-A849-9DD44E7236DF" Name="Distributor1" />
+	<Term Id="4ADD2C21-7A0C-419B-BD41-0819F64AED31" Name="Distributor2" />
+</TermSet> 
+<TermSet Name="Copyright Year" Id="3cf1914e-8f61-4eb2-abed-039281bc3d10">
+    <Term Id="d5123a93-c6f6-4418-bd7f-bb6b247574f0" Name="2010" />
+	<Term Id="dbaa5d47-0486-4bb9-82f4-9e78a6cf5db2" Name="2011" />
+	<Term Id="37328b1b-9f2e-4832-825d-10e72de336d9" Name="2012" />
+	<Term Id="380f7902-d5d8-4798-98e8-d2da93541561" Name="2013" />
+	<Term Id="b109f5ae-4841-410e-9264-ffbb0bc911a7" Name="2014" />
+	<Term Id="e5483918-5f28-45ea-9864-868c91f947f7" Name="2015" />
+	<Term Id="6913dc9d-996b-42a5-8c64-feb7a0d51fd3" Name="2016" />
+	<Term Id="73e1deb6-bbc3-4882-a56b-5d08266f000b" Name="2017" />
+	<Term Id="07b771bc-4456-46d0-b886-85dc8ee29c99" Name="2018" />
+</TermSet> 
+<TermSet Name="Asset Status" Id="7dcb406e-fde5-4a02-8e5f-865842311b8a">
+  <Term Id="41663f50-69ef-4eeb-a6bd-5590da89800c" Name="RR" />
+	<Term Id="9fcb704d-560a-41d0-bac0-f5c376daa04c" Name="PR" />
+	<Term Id="ad8a6224-7ec9-47bd-ab41-c34e7303caf3" Name="AR" />
+	<Term Id="86cf0e96-6537-42d1-9500-642204cf9bdd" Name="MR" />
+</TermSet>
+  <TermSet Name="Case Version" Id="6704796f-5f12-4659-975e-0a22acf5fd36">
+    <Term Id="fce80baf-e60b-465a-9c0d-17577bc470c2" Name="Original" />
+    <Term Id="af7a1646-c0a1-4cb5-aca1-1ca54a285df6" Name="Translation" />
+    <Term Id="e9aed3ec-f6b6-4ac6-98b7-2394d0df78d4" Name="Abridged" />
+    <Term Id="45bef15e-d77f-4e40-b9e1-375b1fdd7c15" Name="Adoption" />
+  </TermSet>
+  <TermSet Name="Distrubution Policy" Id="db10f309-842f-471b-9821-6dd73ed29e93">
+    <Term Id="27ed3ea9-2262-4042-b759-672c29599523" Name="DPolicy1" />
+    <Term Id="de360745-9885-4dd7-86d2-776b1f642f05" Name="DPolicy2" />
+    <Term Id="59eb86ed-aadd-4cef-86f6-baedcb7cb235" Name="DPolicy3" />
+    <Term Id="4f37da07-6d29-4216-a17b-907afce84b10" Name="DPolicy4" />
+  </TermSet>
+</Group>
+
+
+
+
+
